@@ -1,11 +1,12 @@
 # Site settings
-title: Test
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Bradley Hawkins
+email: hawbra56@gmail.com
+description: "The portfolio of Bradley Hawkins"
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://bradhdesign.com"
+twitter_username: bradleyhawkins
+dribbble_username: BradleyHawkins
+github_username:  hawbra56
 
 # Build settings
 markdown: kramdown
