@@ -143,20 +143,19 @@ ul#portfolio {
 		margin-bottom: 20px;
 	}
 		ul#portfolio a img{
+			position: relative;
 			width:372px;
-			border: 4px solid #ed3800;
+			border: 4px solid #fff;
 			-webkit-box-shadow:  0px 1px 4px 0px rgba(0, 0, 0, .2);
 	        box-shadow:  0px 1px 4px 0px rgba(0, 0, 0, .2); 
 		   
 		}
 			ul#portfolio a img:hover { 
-				border-color: #fff;
 				filter: grayscale(1);
 				-webkit-filter: grayscale(1);
 				-moz-filter: grayscale(1);
 				-o-filter: grayscale(1);
 				-ms-filter: grayscale(1);
-
 /*
 				filter: none;
 				-webkit-filter: none;
@@ -165,6 +164,11 @@ ul#portfolio {
 				-ms-filter: none;
 */
 			}
+			
+			ul#portfolio a img:active { 
+				top: 1px;
+			}
+
 		
 
 
@@ -345,6 +349,6 @@ a.button.project:hover,
 		width: 94%;
 	}
 	 ul#portfolio a img{
-			width:292px;
+			width:272px;
 		}
 }
