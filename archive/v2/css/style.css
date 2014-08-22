@@ -1,0 +1,350 @@
+/*********************************************************************************************
+
+Project : rwdgrid - responsive grid system for your next project
+URI: http://rwdgrid.com/
+Version: 1.0
+Author: Vineeth G S 
+Author URI: http://www.gsvineeth.com
+Github URI: https://github.com/gsvineeth/rwdgrid/
+
+**********************************************************************************************
+
+1.  Default / for Grid 1200px             
+2.  960px 
+3.  720px
+4.  lt 720px 
+
+
+**********************************************************************************************/
+
+
+/********************************************************************************************* 
+
+1.  Default / for Grid 1200px             
+
+*********************************************************************************************/  
+
+
+
+
+body {
+
+	font-family: "adobe-garamond-pro",sans-serif;
+	background:#fff url('../images/bg-texture.gif') repeat top left;		
+}
+
+img.typekit-badge { opacity: .4}
+
+.clear {clear: both;}
+
+/* Typography styles */
+
+h1, h2  { 
+	font-family: 'Montserrat', sans-serif; 
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2 {	
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+
+p { 
+	font-family: "adobe-garamond-pro",sans-serif;
+}
+	.home p.intro {
+		font-size: 1.5em;
+		line-height: 1.6em; 
+		text-align: center;
+		padding: 50px 12%;
+		width:76%;
+	}
+hr { 
+	background: url('../images/hr.png') no-repeat top center;
+	display: block;
+	height: 30px;
+	width: 100%;
+	border: none;
+	padding: 20px 0;
+}
+
+a { 
+	color: #ed3800; 
+	text-decoration: underline;
+}
+
+a:hover { 
+	color: #555; 
+}
+
+/* Header styles */	
+.header-wrapper,
+.header-inner {
+	height: 502px;
+	width: 100%;
+}	
+.header-wrapper { 
+	background: url('../images/bg-header-repeat.jpg') repeat-x top left; 
+	 
+}
+	.header-inner {
+		background: url('../images/bg-header.png') no-repeat top center;
+	}	
+	
+.header-inner a.logo { 
+	position: absolute; 
+	top:-20px; 
+	left: 60px;
+	z-index: 9999;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8; 
+	 
+}
+
+.header-inner a.logo:hover { 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4; 
+}
+
+.home .header-inner h1 { 
+	background: url('../images/bradley-hawkins-portfolio-large.png') no-repeat 0 0;
+	display: block;
+	width: 810px;
+	height: 352px;
+	position: absolute;
+	top:110px;
+	left:20px;
+	text-indent: -9999px;
+	z-index: 9997;
+}
+
+/* Content styles */
+.content { padding-bottom: 80px; }
+
+ul#portfolio {
+	list-style: none; 
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+	ul#portfolio li {
+	 	display: block;
+		float: left;
+		margin-bottom: 20px;
+	}
+		ul#portfolio a img{
+			width:372px;
+			border: 4px solid #ed3800;
+			-webkit-box-shadow:  0px 1px 4px 0px rgba(0, 0, 0, .2);
+	        box-shadow:  0px 1px 4px 0px rgba(0, 0, 0, .2); 
+		   
+		}
+			ul#portfolio a img:hover { 
+				border-color: #fff;
+				filter: grayscale(1);
+				-webkit-filter: grayscale(1);
+				-moz-filter: grayscale(1);
+				-o-filter: grayscale(1);
+				-ms-filter: grayscale(1);
+
+/*
+				filter: none;
+				-webkit-filter: none;
+				-moz-filter: none;
+				-o-filter: none;
+				-ms-filter: none;
+*/
+			}
+		
+
+
+/* Footer styles */
+.footer-wrapper { 
+	background: #ed3800;
+	width: 100%;
+}
+.footer { 
+	background: #ed3800; 
+	padding:6% 0;
+}
+
+p.copyright { 
+	font-size: .8em;
+	line-height: 1.2em;
+	letter-spacing: .1em;
+	color: #942301;
+	font-style: italic; 
+	text-transform: uppercase;
+}
+
+.social-icons {
+	height: 44px;
+	width: auto;
+	margin:8% auto 2% auto;
+	text-align:center;
+}
+
+.social-icons li,
+.social-icons li a {
+	display: inline-block;
+	height: 44px;
+	width: 44px;
+}
+
+.social-icons li a {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.social-icons li {
+	margin: 0 1px;
+}
+
+.social-icons li{
+	background: url('../images/icon-sprite.gif') no-repeat 0 0;  
+}
+
+.social-icons li:hover{
+	background-position: 0 -44px;  
+}
+
+.social-icons li.twitter { background-position: -44px 0;}
+.social-icons li.twitter:hover { background-position: -44px -44px;}
+.social-icons li.zerply { background-position: -88px 0;}
+.social-icons li.zerply:hover { background-position: -88px -44px;}
+.social-icons li.linkdin { background-position: -132px 0;}
+.social-icons li.linkdin:hover { background-position: -132px -44px;}
+.social-icons li.facebook { background-position: -176px 0;}
+.social-icons li.facebook:hover { background-position: -176px -44px;}
+
+
+/* button styles */
+
+a.button {
+	display:inline-block;
+	padding: 20px 8%;
+	margin: 0 0 20px 0; 
+	text-align: center; 
+	border: 3px solid #fff;  
+	font-family: 'Montserrat', sans-serif;
+	font-weight:700;
+	font-size: 1em;
+	letter-spacing:.1em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+}
+	a.button:hover, 
+	a.button:active, 
+	a.button.active {
+		background: #fff;
+		color: #ed3800;
+	
+	
+	}
+	
+a.button.project {
+display: block;
+float: left;
+width: 84%;
+border: 3px solid #ed3800;
+color: #ed3800;
+min-height: 100px;
+font-size: 1.4em;
+letter-spacing: -.04em;
+padding-top: 100px;
+}
+
+a.button.project:hover, 
+	a.button.project:active, 
+	a.button.project.active {
+		background: #ed3800;
+		color: #fff;
+	
+	
+	}
+	
+/* ============================= */
+/* ! Layout for tablet version   */
+/* ============================= */
+	
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+ ul#portfolio a img{
+			width:292px;
+		}
+}
+	
+
+
+/* ============================= */
+/* ! Layout for tablet version   */
+/* ============================= */
+
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+	body { font-size: 95%;}
+	
+	.header-inner a.logo {
+		left: 20px;
+	}
+	
+	.home .header-inner h1 {
+		left:5px;
+		background-image: url('../images/bradley-hawkins-portfolio-medium.png');
+		width: 100%;
+		text-indent: -9999px;
+	}
+	
+	.home p.intro {
+		padding: 50px 5%;
+		width: 90%;
+	}
+	a.button.project {
+		padding-top: 80px;
+	}
+
+		ul#portfolio a img{
+			width:212px;
+		}
+
+ 
+}
+	
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 720px) {
+	body { font-size: 85%;}
+	.header-inner a.logo {
+		left: 20px;
+	}
+	
+	.home .header-inner h1 {
+		left:3%;
+		background-image: url('../images/bradley-hawkins-portfolio-small.png');
+		width: 100%;
+		text-indent: -9999px;
+	}
+	
+	.home p.intro {
+		padding: 40px 3%;
+		text-align: left;
+		width: 94%;
+	}
+	 ul#portfolio a img{
+			width:292px;
+		}
+}
