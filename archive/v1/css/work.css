@@ -1,0 +1,186 @@
+/*######################################################
+Portfolio Content
+##################################################### */
+#container .portfolioContent
+{
+	margin: 14px 0 0 0;
+	text-align: left;
+}
+/*######################################################
+---/ End Portfolio Content
+##################################################### */
+
+
+
+
+
+/* #######################################################
+Grey Separator
+####################################################### */
+#container .greySeparator
+{
+	clear: both;
+	margin: 46px 0 0 0;
+	height: 1px;
+	background-color: #807873;
+}
+/* #######################################################
+---/ End Grey Separator
+####################################################### */
+
+
+
+
+
+
+/*######################################################
+Description
+##################################################### */
+#container .description
+{
+	float: left;
+	margin: 46px 0 0 0;
+	text-align: left;
+	width: 300px;
+}
+
+#container .description h1
+{
+	font: normal 0.75em "Times New Roman", Times, serif;
+	color: #ff4e00;
+}
+
+#container .description h2
+{
+	padding: 0 0 10px 0;
+	font: normal 0.583em "Times New Roman", Times, serif;
+	color: #807873;
+	font-style: italic;
+	border-bottom: 1px solid #807873;
+}
+
+#container .description p
+{
+	margin: 20px 0 20px 0;
+	font: normal 0.583em "Times New Roman", Times, serif;
+	color:#666;
+	line-height: 1.5em;
+}
+
+#container .description a
+{color:#000; text-decoration:none;
+}
+#container .description a:hover
+{color:#666;
+}
+
+#container .description a.gray
+{color:#999; text-decoration:none;
+}
+#container .description a.gray:hover
+{color:#666;
+}
+/*######################################################
+---/ End Description
+##################################################### */
+
+
+
+
+
+/*######################################################
+Image
+##################################################### */
+#container .image
+{
+	float: right;
+	margin: 46px 0 0 0;
+}
+/*######################################################
+---/ End Image
+##################################################### */
+
+
+
+
+
+
+
+/*#######################################################
+jCarousel
+###################################################### */
+.jcarousel-skin-portfolio .jcarousel-container
+{
+	background:#fff;
+	border: solid 1px #CCC;
+}
+
+.jcarousel-skin-portfolio .jcarousel-container-horizontal
+    width: 577px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-container-vertical {
+    width: 577px;
+    height: 366px;
+    padding: 40px 0px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-clip-horizontal
+{
+    width: 577px;
+    height: 366px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-clip-vertical
+{
+    width: 577px;
+    height: 366px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-item
+{
+    width: 577px;
+    height: 366px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-item-horizontal
+{
+    margin-right: 10px;
+}
+
+.jcarousel-skin-portfolio .jcarousel-item-vertical
+{
+    margin-bottom: 10px;
+	background-color: #f6f5f1;
+}
+
+.jcarousel-skin-portfolio .jcarousel-item-placeholder
+{
+	background-color: #f6f5f1;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-portfolio .jcarousel-next-horizontal
+{
+    position: absolute;
+    top: 180px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: transparent url("../images/sldr_next.jpg") no-repeat 0 0;
+}
+
+.jcarousel-skin-portfolio .jcarousel-prev-horizontal
+{
+    position: absolute;
+    top: 180px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: transparent url("../images/sldr_previous.jpg") no-repeat 0 0;
+}

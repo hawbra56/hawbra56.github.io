@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /preview/
+Disallow: /errors/
+Disallow: /CCSFG_0.0.6/
+sitemap: http://www.bradhdesign.com/sitemap.xml 
+

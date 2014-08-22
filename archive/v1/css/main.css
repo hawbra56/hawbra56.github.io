@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* CSS Document */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html {overflow: -moz-scrollbars-vertical; height:101%;} /* Mozilla scrollbar fix */
+
+
+
+body
+{
+	background:url(../images/bg_header.gif) top repeat-x;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 24px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.clear
+{
+	clear: both;
+	height: 0px;
+}
+
+.right{ float: right;}
+.left	{ float: left;}
+
+/* #######################################################
+TYPOGRAPHY
+####################################################### */
+h1{
+	margin: 0;
+	padding: 0 0 0 0;
+	font: normal 2.1em "Times New Roman", Times, serif;
+	color: #000;
+	text-transform:uppercase;
+}
+
+h2 {
+	margin: 0 0 0 0;
+	padding: 0;
+	font: normal .7em "Times New Roman", Times, serif;
+	color:#333;
+	line-height: 1.5em;
+	letter-spacing:.1em;
+	text-transform:uppercase;
+}
+
+
+
+.intro p
+{
+	margin: 0 0 0 0;
+	padding: 0;
+	font: normal .8em "Times New Roman", Times, serif;
+	color:#666;
+	line-height: 1.5em;
+	letter-spacing:.3em;
+	text-transform:uppercase;
+}
+
+#container .intro a,
+#container .intro a:link,
+#container .intro a:active,
+#container .intro a:visited
+{
+	font-style: normal;
+	color: #e97004;
+	text-decoration: none;
+}
+
+a.gray
+{color:#999; text-decoration:none;
+}
+a.gray:hover
+{color:#666;
+}
+
+
+
+	
+/* #######################################################
+---/ END TYPOGRAPHY
+####################################################### */
+
+
+/* #######################################################
+Top Bar
+####################################################### */
+.topBar
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 18px;
+	background-color: #000;
+}
+/* #######################################################
+---/ End Top Bar
+####################################################### */
+
+
+
+
+
+/* #######################################################
+Container
+####################################################### */
+#container
+{
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+	width: 934px;
+	height:auto;
+	clear: both;
+}
+
+#container .intro
+{
+	clear: both;
+	margin: 46px 0 0 0;
+	text-align: left;
+}
+
+#container .contactInfo
+{
+	float: right;
+	margin: 40px 0 0 0;
+	padding: 0;
+	font: normal .5em "Times New Roman", Times, serif;
+	color: #807873;
+	text-align: right;
+}
+
+#container .contactInfo ul
+{
+	list-style: none;
+}
+/* #######################################################
+---/ End Container
+####################################################### */
+
+
+/* #######################################################
+Navigation Container
+####################################################### */
+#container .navigationContainer
+{
+	clear: both;
+	margin: 5px 0 0 0;
+	padding: 0;
+	height: 75px;
+	text-align: left;
+}
+/* #######################################################
+---/ End Navigation Container
+####################################################### */
+
+
+/* #######################################################
+Logo
+####################################################### */
+
+#container .navigationContainer .logo
+{
+	float: left;
+	margin: 0;
+	padding: 0;	
+}
+
+#container .navigationContainer .logo img
+{
+	border: 0;
+}
+/* #######################################################
+---/ End Logo
+####################################################### */
+
+
+
+/* #######################################################
+Navigation
+####################################################### */
+
+#container .navigationContainer .navigation
+{
+	float: right;
+	margin: 44px 0 0 0;
+	padding: 0;	
+}
+
+#container .navigationContainer .navigation ul
+{
+	list-style: none;	
+}
+
+#container .navigationContainer .navigation li
+{
+	margin: 0 0 0 26px;
+	padding: 12px 0 0 0;
+	width: 80px;
+	display: inline;
+	float: left;
+	font: normal .6em  Arial, Helvetica, sans-serif;
+	color: #8f8f8f;
+	border-top: solid 2px #CCC;
+}
+
+#container .navigationContainer .navigation li a,
+#container .navigationContainer .navigation li a:link,
+#container .navigationContainer .navigation li a:active,
+#container .navigationContainer .navigation li a:visited
+{
+	color: #CCC;
+	text-decoration: none;
+	width: 100px;
+}
+
+#container .navigationContainer .navigation li a:hover
+{
+	color: #000;
+}
+
+#container .navigationContainer .navigation .active
+{
+	margin: 0 0 0 26px;
+	padding: 12px 0 0 0;
+	width: 80px;
+	display: inline;
+	float: left;
+	color: #000;
+	font: normal .6em Arial, Helvetica, sans-serif;
+	border-top: solid 2px #ff4e00;
+}
+
+#container .navigationContainer .navigation .active a,
+#container .navigationContainer .navigation .active a:link,
+#container .navigationContainer .navigation .active a:active,
+#container .navigationContainer .navigation .active a:visited
+{
+	color: #373431;
+}
+/* #######################################################
+---/ End Navigation
+####################################################### */
+
+
+
+/* #######################################################
+Grey Separators
+####################################################### */
+#container .greySeparator
+{
+	clear: both;
+	margin: 46px 0 0 0;
+	height: 1px;
+	background-color: #807873;
+}
+
+#container .greySeparatorThick
+{
+	clear: both;
+	margin: 46px 0 0 0;
+	height: 6px;
+	background-color: #000;
+}
+/* #######################################################
+---/ End Grey Separator Thick
+####################################################### */
+
+
+
+
+
+/* #######################################################
+Featured work
+####################################################### */
+#container .featuredWork
+{
+	clear: both;
+	margin: 26px 0 0 0;
+	text-align: left;
+}
+
+
+
+#container .featuredWork ul
+{
+	list-style: none;
+}
+
+#container .featuredWork .images
+{
+	padding: 25px 0 0 0; 
+}
+
+#container .featuredWork .images img
+{
+	border: 1px solid #ccc;  
+}
+
+#container .featuredWork .images img:hover
+{
+	border-color: #333;
+}
+
+#container .featuredWork .images img:active
+{ border-color: #e97004;}
+
+
+#container .featuredWork .images li a 
+{ display: block; height: 146px; width: 304px; border: 1px solid #ccc;  
+ text-indent: -99999px;}
+ 
+#container .featuredWork .images li a.one  
+{ background:url(../images/feature-adtrak2.jpg) no-repeat 0 0;}
+#container .featuredWork .images li a.two  
+{ background:url(../images/feature-gfg2.jpg) no-repeat 0 0;}
+#container .featuredWork .images li a.three  
+{ background:url(../images/feature-adsmart3601.jpg) no-repeat 0 0;}
+
+#container .featuredWork .images li a:hover{ background-position: 0 -146px; border-color: #e97004;}
+#container .featuredWork .images li a:active{ border-color: #333;}
+
+#container .featuredWork .title
+{
+	padding: 25px 0 0 0;
+}
+
+#container .featuredWork .title a,
+#container .featuredWork .title a:link,
+#container .featuredWork .title a:active,
+#container .featuredWork .title a:visited
+{
+	font-style: normal;
+	color: #ff4e00;
+	text-decoration: none;
+}
+
+#container .featuredWork .title a:hover
+{
+	text-decoration: underline;
+}
+
+#container .featuredWork .description
+{
+	padding: 12px 0 0 0;
+}
+
+#container .featuredWork li
+{
+	margin: 0 16px 0 0;
+	width: 300px;
+	float: left;
+	font: normal 0.65em "Times New Roman", Times, serif;
+	line-height:.8em;
+	color:#666;
+	font-style: italic;
+}
+
+#container .featuredWork .end
+{
+	margin: 0;
+	width: 300px;
+	float: left;
+}
+/* #######################################################
+---/ End Featured work
+####################################################### */
+
+
+
+/* #######################################################
+Footer
+####################################################### */
+
+#container .footer
+{
+	clear: both;
+	margin: 20px 0 20px 0;
+	padding-bottom:30px;
+	text-align: left;
+	font: normal .5em "Times New Roman", Times, serif;
+	color: #807873;
+}
+
+
+/* #######################################################
+---/ End Footer
+####################################################### */
