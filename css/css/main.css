@@ -10,47 +10,40 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: "Fjord One", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: #fdfdfd; }
+  background-color: #000000; }
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+a:hover {
+  color: #000;
+  text-decoration: underline; }
+
+a:visited {
+  color: #205caa; }
 
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body:before {
-  content: '';
-  display: inline-block;
-  background-image: deprecated-webkit-gradient(linear, left top, left bottom, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -webkit-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -o-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eeeeee 8.5298%, #eeeeee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eeeeee 17.05961%, #eeeeee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eeeeee 25.58941%, #eeeeee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eeeeee 34.11922%, #eeeeee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eeeeee 42.64902%, #eeeeee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eeeeee 51.17883%, #eeeeee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eeeeee 59.70863%, #eeeeee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eeeeee 68.23843%, #eeeeee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eeeeee 76.76824%, #eeeeee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eeeeee 85.29804%, #eeeeee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eeeeee 93.82785%, #eeeeee 100.0%, transparent 100.0%);
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 68em;
-  opacity: 0.4;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: 9999; }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fjord One", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 100%;
-  font-weight: 400; }
+  font-weight: 700;
+  /*   font-weight: 400; */
+  text-transform: uppercase; }
 
 h1 {
-  font-size: 42px;
+  font-size: 50px;
   letter-spacing: -1.75px;
-  line-height: 1;
-  font-weight: 300; }
+  line-height: 50px; }
 
 h2 {
   font-size: 30px;
@@ -64,20 +57,13 @@ h4 {
   font-size: 20px;
   letter-spacing: -1px; }
 
-a {
-  font-family: "Raleway", sans-serif;
-  color: purple;
-  text-decoration: none; }
-
-a:hover {
-  color: #000;
-  text-decoration: underline; }
-
-a:visited {
-  color: #205caa; }
-
 /* Layout Styles */
 /* ----------------------------------------------------------*/
+.page-content, header, footer, section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
 /* Utility */
 .wrap:before,
 .wrap:after {
@@ -88,43 +74,69 @@ a:visited {
   clear: both; }
 
 .wrap {
-  max-width: 68em;
+  max-width: 62.5em;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   margin: 0 auto;
-  zoom: 1; }
+  zoom: 1;
+  /*   @include media(\$tablet) { // As defined in _grid-settings.scss
+    padding: 0 20px;
+  }
+  @include media(\$mobile) { // As defined in _grid-settings.scss
+    padding: 0 60px;
+  } */ }
   .wrap:after {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 768px) {
-    .wrap {
-      padding: 0 20px; } }
-  @media screen and (max-width: 480px) {
-    .wrap {
-      padding: 0 60px; } }
 
 /* Site header */
-.site-header {
-  border-top: 5px solid #333;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
-  background-color: white; }
+header {
+  position: fixed;
+  max-width: none;
+  z-index: 9999; }
+  header a.site-title {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    height: 141px;
+    width: 141px;
+    display: block; }
+  header a.site-title:hover {
+    opacity: 0.5; }
+  header .site-nav {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    line-height: 56px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase; }
+  header .site-nav .menu-icon {
+    display: none; }
+  header .site-nav .page-link {
+    font-size: 12px;
+    margin-right: 40px;
+    color: #fff;
+    letter-spacing: 2px; }
 
-.site-nav {
-  float: left;
-  line-height: 56px; }
+/* Page Content styles */
+/* ----------------------------------------------------------*/
+.page-content {
+  background: white; }
 
-.site-nav .menu-icon {
-  display: none; }
-
-.site-nav .page-link {
-  margin-left: 20px;
-  color: #727272;
-  letter-spacing: -.5px; }
+section.intro {
+  background: url("../../../images/bg-hero-1.png") no-repeat left top;
+  min-height: 480px; }
+  section.intro h1 {
+    margin-top: 305px;
+    color: white; }
 
 /* Site footer */
-.site-footer {
+footer {
+  background: white;
   border-top: 1px solid #e8e8e8; }
 
 .footer-heading {
@@ -146,25 +158,8 @@ a:visited {
   letter-spacing: -.3px;
   color: #828282; }
 
-.github-icon-svg,
-.twitter-icon-svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: 3px; }
-
-/* Page Content styles */
-/* ----------------------------------------------------------*/
-.page-content {
-  padding: 30px 0;
-  background-color: #fff; }
-
 /* Home styles */
 /* ----------------------------------------------------------*/
-h1 {
-  margin-bottom: 25px; }
-
 .posts {
   list-style-type: none; }
 

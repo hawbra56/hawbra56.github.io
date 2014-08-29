@@ -2,34 +2,39 @@
 layout: default
 ---
 
-<div class="home">
 
     <section class="intro">
-      <h1>{{ site.description }}</h1>
+      <div class="wrap">
+        <h1>{{ site.description }}</h1>
+      </div>
     </section>
 
     <section class="work work-name">
-      <h2>Milk Money</h2>
-      <p class="small">Web site/product Design, UX, Agile workflow</p>
-      <image></image>
+      <div class="wrap">
+        <h2>Milk Money</h2>
+        <p class="small">Web site/product Design, UX, Agile workflow</p>
+        <img src="images/work-milkmoney-teaser.png" alt="Milk Money"/>
+      </div>
     </section>
 
     <section class="recent-work">
-      <h2>Some of my recent work</h2>
-      <a href="" class="large"></a>
+      <div class="wrap">
+        <h2>Some of my recent work</h2>
+        <a href="" class="large"></a>
+      </div>
     </section>
 
     <section class="journal">
-      <h2>Journal</h2>
-      <ul class="posts">
-        {% for post in site.posts %}
-          <li>
-            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      <div class="wrap">
+        <h2>Journal</h2>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>
+              <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
     </section>
-
-</div>

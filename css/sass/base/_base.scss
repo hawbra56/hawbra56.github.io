@@ -10,9 +10,17 @@ html, body { height: 100%; }
 
 
 body {
-  font-family: $primary-font;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: #fdfdfd;
+  background-color: #000000;
 }
+
+a         {
+  color: $primary-action-color;
+  text-decoration: none;
+  cursor:pointer;
+}
+a:hover   { color: #000; text-decoration: underline; }
+a:visited { color: #205caa; }

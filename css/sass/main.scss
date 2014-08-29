@@ -6,13 +6,14 @@
 // LIBRARIES
 // Any extra mixins and libraries uesd
 @import "bourbon/bourbon"; //sweet mixin library
-
-$visual-grid: true;
+@import "base/grid-settings"; //resets for neats variables
+$visual-grid: false;
 $visual-grid-index: front;
 $visual-grid-color: #EEE !default;
 
 @import "bourbon/neat/neat"; //sweet grid framework
-@import "base/grid-settings"; //resets for neats variables
+@import "base/break-points"; //resets for neats variables
+
 
 // PARTIALS
 // Rest of the site styling
