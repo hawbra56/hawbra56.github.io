@@ -89,6 +89,7 @@ section.intro {
   background: url("../../../images/bg-hero-1.png") no-repeat left top;
   min-height: 480px;
   h1 {
+    @include span-columns(11);
     margin-top:305px;
     color: $secondary-color;
   }

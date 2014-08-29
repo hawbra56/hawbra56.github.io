@@ -131,8 +131,14 @@ section.intro {
   background: url("../../../images/bg-hero-1.png") no-repeat left top;
   min-height: 480px; }
   section.intro h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
     margin-top: 305px;
     color: white; }
+    section.intro h1:last-child {
+      margin-right: 0; }
 
 /* Site footer */
 footer {
