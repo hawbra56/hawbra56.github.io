@@ -22,13 +22,12 @@ body {
   position: relative;
   margin: 0 auto;
   zoom: 1;
-
-/*   @include media(\$tablet) { // As defined in _grid-settings.scss
-  padding: 0 20px;
-}
-@include media(\$mobile) { // As defined in _grid-settings.scss
-  padding: 0 60px;
-} */
+  @include media($tablet) { // As defined in _grid-settings.scss
+    padding: 0 20px;
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    padding: 0 20px;
+  }
 }
 
 
@@ -36,8 +35,8 @@ body {
 /* Site header */
 
 header {
-position: fixed;
-max-width:none;
+/* position: fixed;
+max-width:none; */
 z-index: 9999;
   a.site-title {
     position: absolute;
@@ -84,15 +83,39 @@ z-index: 9999;
   background: $secondary-color;
 }
 
+section {
+  text-align: center;
+  margin: 100px 0 0 0;
+  border-bottom:1px solid #eee;
+}
 
 section.intro {
   background: url("../../../images/bg-hero-1.png") no-repeat left top;
   min-height: 480px;
+  text-align: left;
   h1 {
     @include span-columns(11);
     margin-top:305px;
     color: $secondary-color;
+    @include media($mobile) { // As defined in _grid-settings.scss
+      margin-top:110px;
+    }
   }
+
+}
+
+section.work {
+  img {
+    width:100%;
+    max-width: 1049px;
+    display:block;
+    margin:50px auto 0 auto;
+    padding:0 20px;
+  }
+}
+
+section.recent-work{
+  text-align:left;
 }
 
 /* Site footer */
@@ -100,6 +123,7 @@ section.intro {
 footer {
   background: $secondary-color;
   border-top: 1px solid #e8e8e8;
+  text-align: center;
 
 }
 

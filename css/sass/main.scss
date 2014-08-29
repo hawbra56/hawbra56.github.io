@@ -10,7 +10,6 @@
 $visual-grid: false;
 $visual-grid-index: front;
 $visual-grid-color: #EEE !default;
-
 @import "bourbon/neat/neat"; //sweet grid framework
 @import "base/break-points"; //resets for neats variables
 

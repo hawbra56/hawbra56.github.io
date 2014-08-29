@@ -28,6 +28,10 @@ a:hover {
 a:visited {
   color: #205caa; }
 
+p {
+  font-size: 16px;
+  line-height: 32px; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -79,22 +83,22 @@ h4 {
   margin-right: auto;
   position: relative;
   margin: 0 auto;
-  zoom: 1;
-  /*   @include media(\$tablet) { // As defined in _grid-settings.scss
-    padding: 0 20px;
-  }
-  @include media(\$mobile) { // As defined in _grid-settings.scss
-    padding: 0 60px;
-  } */ }
+  zoom: 1; }
   .wrap:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (max-width: 768px) {
+    .wrap {
+      padding: 0 20px; } }
+  @media screen and (max-width: 480px) {
+    .wrap {
+      padding: 0 20px; } }
 
 /* Site header */
 header {
-  position: fixed;
-  max-width: none;
+  /* position: fixed;
+  max-width:none; */
   z-index: 9999; }
   header a.site-title {
     position: absolute;
@@ -127,9 +131,15 @@ header {
 .page-content {
   background: white; }
 
+section {
+  text-align: center;
+  margin: 100px 0 0 0;
+  border-bottom: 1px solid #eee; }
+
 section.intro {
   background: url("../../../images/bg-hero-1.png") no-repeat left top;
-  min-height: 480px; }
+  min-height: 480px;
+  text-align: left; }
   section.intro h1 {
     float: left;
     display: block;
@@ -139,11 +149,25 @@ section.intro {
     color: white; }
     section.intro h1:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 480px) {
+      section.intro h1 {
+        margin-top: 110px; } }
+
+section.work img {
+  width: 100%;
+  max-width: 1049px;
+  display: block;
+  margin: 50px auto 0 auto;
+  padding: 0 20px; }
+
+section.recent-work {
+  text-align: left; }
 
 /* Site footer */
 footer {
   background: white;
-  border-top: 1px solid #e8e8e8; }
+  border-top: 1px solid #e8e8e8;
+  text-align: center; }
 
 .footer-heading {
   font-size: 18px;
