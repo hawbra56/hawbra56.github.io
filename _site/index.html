@@ -16,12 +16,13 @@
 
 
     <body>
+      <div class="background">
 
-    <header>
+        <header class="header">
+  <div class="fixed">
+  <div class="inner">
 
-  <div class="wrap">
-
-  <nav class="site-nav">
+    <nav class="site-nav">
 
       <div class="trigger">
         <!-- 
@@ -37,22 +38,21 @@
       </div>
     </nav>
 
-<a class="site-title" href="/" title="Bradley Hawkins"><img src="images/logo-white.png" alt="Bradley Hawkins"/></a>
+    <a class="site-title" href="/" title="Bradley Hawkins"><img src="images/logo-white.png" alt="Bradley Hawkins"/></a>
 
   </div>
-
+  </div>
 </header>
 
-
-    <div class="page-content">
-          <section class="intro">
-      <div class="wrap">
+            <a id="showHere"></a>
+    <section class="intro">
+      <div class="inner">
         <h1>Art director, web designer, father, husband, cyclist.</h1>
       </div>
     </section>
 
     <section class="work work-name">
-      <div class="wrap">
+      <div class="inner">
         <h2>Milk Money</h2>
         <p class="subtitle">Web site/product Design, UX, Agile workflow</p>
         <a href="#">View Case study</a>
@@ -61,14 +61,14 @@
     </section>
 
     <section class="recent-work">
-      <div class="wrap">
+      <div class="inner">
         <h2>Some of my recent work</h2>
         <a href="" class="large"></a>
       </div>
     </section>
 
     <section class="journal">
-      <div class="wrap">
+      <div class="inner">
         <h2>Journal</h2>
         <ul class="posts">
           
@@ -82,10 +82,8 @@
       </div>
     </section>
 
-    </div>
-
-    <footer>
-  <div class="wrap">
+        <footer>
+  <div class="inner">
 
   <h2>About Me</h2>
   <p>I am Bradley Hawkins I currently reside in Central Pennsylvania and work full time with the awesome crew at Andculture. When not designing you might find me on my bicycle, hiking various PA trails, helping my brother build log homes, or spending time with my wonderful family.</p>
@@ -113,6 +111,27 @@
 </div>
 </footer>
 
+<script type="text/javascript" src="../js/headhesive.js"></script>
+    <script>
 
+        // Set options
+        var options = {
+            offset: 500,
+            classes: {
+                clone:   'header--clone',
+                stick:   'header--stick',
+                unstick: 'header--unstick'
+            }
+        };
+
+        // Initialise with options
+        var banner = new Headhesive('.header', options);
+
+        // Headhesive destroy
+        // banner.destroy();
+    </script>
+
+
+      </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 <footer>
-  <div class="wrap">
+  <div class="inner">
 
   <h2>About Me</h2>
   <p>I am Bradley Hawkins I currently reside in Central Pennsylvania and work full time with the awesome crew at Andculture. When not designing you might find me on my bicycle, hiking various PA trails, helping my brother build log homes, or spending time with my wonderful family.</p>
@@ -26,3 +26,23 @@
   <image></image>
 </div>
 </footer>
+
+<script type="text/javascript" src="../js/headhesive.js"></script>
+    <script>
+
+        // Set options
+        var options = {
+            offset: 500,
+            classes: {
+                clone:   'header--clone',
+                stick:   'header--stick',
+                unstick: 'header--unstick'
+            }
+        };
+
+        // Initialise with options
+        var banner = new Headhesive('.header', options);
+
+        // Headhesive destroy
+        // banner.destroy();
+    </script>

@@ -4,7 +4,7 @@ body {
 
 }
 
-.page-content, header, footer, section {
+.background, header, footer, section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -14,14 +14,15 @@ body {
 
 /* Utility */
 
-.wrap:before,
-.wrap:after { content:""; display:table; }
-.wrap:after { clear: both; }
-.wrap {
+.inner:before,
+.inner:after { content:""; display:table; }
+.inner:after { clear: both; }
+.inner {
   @include outer-container;
   position: relative;
   margin: 0 auto;
   zoom: 1;
+
   @include media($tablet) { // As defined in _grid-settings.scss
     padding: 0 20px;
   }
@@ -34,29 +35,25 @@ body {
 
 /* Site header */
 
-header {
-/* position: fixed;
-max-width:none; */
-z-index: 9999;
+.header {
+  z-index: 9999;
+  height:85px;
+
   a.site-title {
     position: absolute;
     z-index: 9999;
-    top:0;
+    top:-20px;
     right:0;
     height:141px;
     width:141px;
     display:block;
-
   }
   a.site-title:hover{
     opacity: 0.5;
   }
   .site-nav {
-    position: absolute;
-    z-index: 9999;
-    top:0;
-    left:0;
-    line-height: 56px;
+    float:left;
+    line-height: 85px;
     font-family: $primary-font;
     text-transform: uppercase;
   }
@@ -79,20 +76,20 @@ z-index: 9999;
 /* Page Content styles */
 /* ----------------------------------------------------------*/
 
-.page-content {
-  background: $secondary-color;
+.background {
+  background: $secondary-color url("../../../images/bg-hero-1.png") no-repeat left top;
 }
 
 section {
   text-align: center;
-  margin: 100px 0 0 0;
+  padding: 100px 0 0 0;
   border-bottom:1px solid #eee;
 }
 
 section.intro {
-  background: url("../../../images/bg-hero-1.png") no-repeat left top;
   min-height: 480px;
   text-align: left;
+  padding-top: 0;
   h1 {
     @include span-columns(11);
     margin-top:305px;
@@ -105,6 +102,8 @@ section.intro {
 }
 
 section.work {
+  background: $secondary-color;
+
   img {
     width:100%;
     max-width: 1049px;
@@ -313,10 +312,93 @@ footer {
   .post-content ul,
   .post-content ol { padding-left: 10px; }
 
-  .site-footer .column {
-    float: none;
-    clear: both;
-    width: auto;
-    margin: 0 0 15px; }
 
+}
+
+
+
+/*----------------------------------------------------------------------------*\
+    Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+
+/**
+ * Headhesive element clone
+ * > `clone` class for the cloned element:
+ *
+ |  var options = {
+ |      classes {
+ |          clone: 'banner--clone';
+ |      }
+ |  }
+ *
+ */
+.header--clone {
+
+    /* Required styles */
+    position: fixed;
+    max-width:none;
+    top: 0;
+    left: 0;
+
+    /* Translate -100% to move off screen */
+    -webkit-transform: translateY(-150%);
+        -ms-transform: translateY(-150%);
+            transform: translateY(-150%);
+
+    /* Animations */
+    -webkit-transition: all 300ms ease-in-out;
+       -moz-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+
+      .fixed {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.9); // white
+        border-bottom:1px solid #eee;
+      }
+      .site-nav .page-link {
+        color: #000;
+      }
+      a.site-title img{
+        -webkit-filter: invert(100%);
+      }
+
+}
+
+
+
+/**
+ * Headhesive stick
+ * > `stick` class for the cloned element:
+ *
+ |  var options = {
+ |      classes {
+ |          stick: 'banner--stick';
+ |      }
+ |  }
+ *
+ */
+.header--stick {
+
+    /* Translate back to 0%; */
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+}
+
+
+/**
+ * Headhesive unstick
+ * > `unstick` class for the cloned element:
+ *
+ |  var options = {
+ |      classes {
+ |          unstick: 'banner--unstick';
+ |      }
+ |  }
+ *
+ */
+.header--unstick {
+    /* Not required to use, but could be useful to have */
 }
