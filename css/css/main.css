@@ -98,11 +98,11 @@ h4 {
 /* Site header */
 .header {
   z-index: 9999;
-  height: 85px; }
+  height: 82px; }
   .header a.site-title {
     position: absolute;
     z-index: 9999;
-    top: -20px;
+    top: -22px;
     right: 0;
     height: 141px;
     width: 141px;
@@ -113,6 +113,7 @@ h4 {
     float: left;
     line-height: 85px;
     font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     text-transform: uppercase; }
   .header .site-nav .menu-icon {
     display: none; }
@@ -121,6 +122,8 @@ h4 {
     margin-right: 40px;
     color: #fff;
     letter-spacing: 2px; }
+  .header .site-nav .page-link:hover {
+    text-decoration: none; }
 
 /* Page Content styles */
 /* ----------------------------------------------------------*/
@@ -382,7 +385,9 @@ footer {
   .header--clone .site-nav .page-link {
     color: #000; }
   .header--clone a.site-title img {
-    -webkit-filter: invert(100%); }
+    -webkit-filter: invert(100%);
+    filter: Invert;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='invert'><feColorMatrix type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert"); }
 
 /**
  * Headhesive stick

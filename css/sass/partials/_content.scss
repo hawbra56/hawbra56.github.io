@@ -37,12 +37,12 @@ body {
 
 .header {
   z-index: 9999;
-  height:85px;
+  height:82px;
 
   a.site-title {
     position: absolute;
     z-index: 9999;
-    top:-20px;
+    top:-22px;
     right:0;
     height:141px;
     width:141px;
@@ -55,6 +55,7 @@ body {
     float:left;
     line-height: 85px;
     font-family: $primary-font;
+    font-weight:700;
     text-transform: uppercase;
   }
 
@@ -67,6 +68,9 @@ body {
     margin-right: 40px;
     color: #fff;
     letter-spacing: 2px;
+  }
+  .site-nav .page-link:hover{
+    text-decoration:none;
   }
 }
 
@@ -362,6 +366,8 @@ footer {
       }
       a.site-title img{
         -webkit-filter: invert(100%);
+        filter:Invert;
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix type=\'matrix\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#invert");
       }
 
 }
