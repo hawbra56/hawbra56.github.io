@@ -135,7 +135,7 @@ section.recent-work{
       text-align:center;
     }
   }
-  .inner a {
+  .inner p a {
     float: right;
     @include media($tablet) { // As defined in _grid-settings.scss
       float:none;

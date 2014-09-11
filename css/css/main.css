@@ -7,7 +7,8 @@
   padding: 0; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: "Libre Baskerville", serif;
@@ -60,6 +61,17 @@ h3 {
 h4 {
   font-size: 20px;
   letter-spacing: -1px; }
+
+.work p, .recent-work p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #9d9d9d;
+  letter-spacing: .2em;
+  text-transform: uppercase; }
+  .work p a, .recent-work p a {
+    color: black;
+    font-weight: 700; }
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
@@ -182,15 +194,15 @@ section.recent-work {
       section.recent-work .inner h2 {
         float: none;
         text-align: center; } }
-  section.recent-work .inner a {
+  section.recent-work .inner p a {
     float: right; }
     @media screen and (max-width: 768px) {
-      section.recent-work .inner a {
+      section.recent-work .inner p a {
         float: none;
         display: block;
         text-align: center; } }
     @media screen and (max-width: 480px) {
-      section.recent-work .inner a {
+      section.recent-work .inner p a {
         float: none;
         display: block;
         text-align: center; } }
