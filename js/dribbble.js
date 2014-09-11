@@ -8,6 +8,6 @@
 	        html.push('alt="' + shot.title + '"></a></li>');
 	    });
 
-	    $('#portfolio').html(html.join(''));
+	    $('#dribbble-feed').html(html.join(''));
 	}, {page: 1, per_page: 4});
 });

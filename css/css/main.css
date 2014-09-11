@@ -130,6 +130,14 @@ h4 {
 .background {
   background: white url("../../../images/bg-hero-1.png") no-repeat left top; }
 
+section:before,
+section:after {
+  content: "";
+  display: table; }
+
+section:after {
+  clear: both; }
+
 section {
   text-align: center;
   padding: 100px 0 0 0;
@@ -163,24 +171,29 @@ section.work {
 
 section.recent-work {
   text-align: left; }
+  section.recent-work .inner h2 {
+    float: left; }
+  section.recent-work .inner a {
+    float: right; }
 
-#portfolio {
+#dribbble-feed {
   list-style: none;
   display: block;
   width: 100%;
   margin: 0 auto; }
-  #portfolio li {
-    display: block;
+  #dribbble-feed li {
     float: left;
-    margin-bottom: 20px;
-    background: red; }
-  #portfolio a img {
-    position: relative;
-    width: 20%;
-    border: 4px solid #fff;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); }
-  #portfolio a img:hover {
+    width: 25%; }
+    @media screen and (max-width: 768px) {
+      #dribbble-feed li {
+        width: 50%; } }
+    @media screen and (max-width: 480px) {
+      #dribbble-feed li {
+        width: 100%; } }
+  #dribbble-feed a img {
+    width: 100%;
+    border: 1px solid #fff; }
+  #dribbble-feed a img:hover {
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
@@ -193,8 +206,6 @@ section.recent-work {
             -o-filter: none;
             -ms-filter: none;
     */ }
-  #portfolio a img:active {
-    top: 1px; }
 
 /* Site footer */
 footer {
