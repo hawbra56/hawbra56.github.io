@@ -40,7 +40,7 @@ h4 {
 
   a {
     color:$primary-action-color;
-    font-weight: 700;
+    font-weight: 400;
   }
 }
 
@@ -55,4 +55,12 @@ p.bio-short {
   @include span-columns(8);
   @include shift(2);
   margin-bottom:50px;
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    @include shift(1);
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(0);
+  }
 }
