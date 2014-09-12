@@ -23,8 +23,10 @@ h2 {
 }
 
 h4 {
-  font-size: 20px;
-  letter-spacing: -1px;
+  font-size: 12px;
+  line-height:14px;
+  color: $tertiary-color;
+  letter-spacing:.2em;
 }
 
 
@@ -32,7 +34,7 @@ h4 {
   font-family: $primary-font;
   font-weight: 400;
   font-size:12px;
-  color: #9d9d9d;
+  color: $tertiary-color;
   letter-spacing:.2em;
   text-transform:uppercase;
 
@@ -40,4 +42,17 @@ h4 {
     color:$primary-action-color;
     font-weight: 700;
   }
+}
+
+p.copyright {
+  font-family:$secondary-font;
+  font-size:10px;
+  line-height:14px;
+  color: $tertiary-color;
+}
+
+p.bio-short {
+  @include span-columns(8);
+  @include shift(2);
+  margin-bottom:50px;
 }

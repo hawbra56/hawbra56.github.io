@@ -23,7 +23,7 @@ a {
   cursor: pointer; }
 
 a:hover {
-  color: #000;
+  color: black;
   text-decoration: underline; }
 
 a:visited {
@@ -32,6 +32,9 @@ a:visited {
 p {
   font-size: 16px;
   line-height: 32px; }
+
+.clear {
+  clear: both; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -59,8 +62,10 @@ h3 {
   letter-spacing: -1px; }
 
 h4 {
-  font-size: 20px;
-  letter-spacing: -1px; }
+  font-size: 12px;
+  line-height: 14px;
+  color: #9d9d9d;
+  letter-spacing: .2em; }
 
 .work p, .recent-work p {
   font-family: "Montserrat", sans-serif;
@@ -72,6 +77,22 @@ h4 {
   .work p a, .recent-work p a {
     color: black;
     font-weight: 700; }
+
+p.copyright {
+  font-family: "Libre Baskerville", serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: #9d9d9d; }
+
+p.bio-short {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  margin-bottom: 50px; }
+  p.bio-short:last-child {
+    margin-right: 0; }
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
@@ -195,7 +216,8 @@ section.recent-work {
         float: none;
         text-align: center; } }
   section.recent-work .inner p a {
-    float: right; }
+    float: right;
+    margin-top: 10px; }
     @media screen and (max-width: 768px) {
       section.recent-work .inner p a {
         float: none;
@@ -211,7 +233,7 @@ section.recent-work {
   list-style: none;
   display: block;
   width: 100%;
-  margin: 0 auto; }
+  margin: 25px auto 0 auto; }
   #dribbble-feed li {
     float: left;
     width: 25%; }
@@ -242,26 +264,26 @@ section.recent-work {
 footer {
   background: white;
   /*   border-top: 1px solid #e8e8e8; */
-  text-align: center; }
-
-.footer-heading {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: -.5px;
-  margin-bottom: 15px; }
-
-.site-footer .column {
-  float: left;
-  margin-bottom: 15px; }
-
-.site-footer ul {
-  list-style: none; }
-
-.site-footer li,
-.site-footer p {
-  font-size: 15px;
-  letter-spacing: -.3px;
-  color: #828282; }
+  text-align: center;
+  margin-top: 100px; }
+  footer .connect-links {
+    list-style: none;
+    text-align: center;
+    margin: 0 0 50px 0; }
+    footer .connect-links li {
+      display: inline-block;
+      border-right: solid 1px #9d9d9d;
+      padding: 0 10px;
+      line-height: 12px; }
+    footer .connect-links li:last-child {
+      border-right: none; }
+    footer .connect-links li a {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: black;
+      letter-spacing: .2em;
+      text-transform: uppercase; }
 
 /* Home styles */
 /* ----------------------------------------------------------*/
