@@ -11,23 +11,21 @@ body {
 }
 
 
-
-/* Utility */
-
 .inner:before,
 .inner:after { content:""; display:table; }
 .inner:after { clear: both; }
 .inner {
   @include outer-container;
+
   position: relative;
   margin: 0 auto;
   zoom: 1;
 
   @include media($tablet) { // As defined in _grid-settings.scss
-    padding: 0 20px;
+    @include pad(0 10%);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    padding: 0 20px;
+      @include pad(0 10%);
   }
 }
 
@@ -81,7 +79,7 @@ body {
 /* ----------------------------------------------------------*/
 
 .background {
-  background: $secondary-color url("../../../images/bg-hero-1.png") no-repeat left top;
+  background: $base-color url("../../../images/bg-hero-1.png") no-repeat left top;
 }
 
 section:before,
@@ -91,16 +89,18 @@ section {
   text-align: center;
   padding: 100px 0 0 0;
   border-bottom:1px solid #eee;
+  background: $base-color;
 }
 
 section.intro {
   min-height: 480px;
   text-align: left;
   padding-top: 0;
+  background: none;
   h1 {
     @include span-columns(11);
     margin-top:305px;
-    color: $secondary-color;
+    color: $base-color;
     @include media($mobile) { // As defined in _grid-settings.scss
       margin-top:110px;
     }
@@ -108,17 +108,44 @@ section.intro {
 
 }
 
-section.work {
-  background: $secondary-color;
+.home {
+  section.work {
 
-  img {
+  img.teaser {
     width:100%;
-    max-width: 1049px;
+    max-width: 692px;
     display:block;
-    margin:50px auto 0 auto;
-    padding:0 20px;
+    padding:0;
+    float:left;
+  }
+    .inner  {
+      @include span-columns(5);
+      @include pad(60px 90px 0 90px);
+      float:right;
+      text-align: left;
+      margin:0;
+      @include media($tablet) { // As defined in _grid-settings.scss
+        text-align: center;
+        width:100%;
+      }
+      @include media($mobile) { // As defined in _grid-settings.scss
+          text-align: center;
+          width:100%;
+      }
+
+    }
+  }
+
+  section.work.alt {
+    img.teaser {
+      float:right;
+    }
+    .inner {
+      float: left;
+    }
   }
 }
+
 
 section.recent-work{
   text-align:left;
@@ -164,7 +191,7 @@ section.recent-work{
       width:50%;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      width:100%;
+      width:50%;
     }
   }
    a img{
@@ -191,7 +218,7 @@ section.recent-work{
 /* Site footer */
 
 footer {
-  background: $secondary-color;
+  background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
   text-align: center;
   margin-top:100px;
@@ -212,7 +239,7 @@ footer {
     }
     li a{
       font-family: $primary-font;
-      font-weight: 400;
+      font-weight: 700;
       font-size:11px;
       color:$primary-action-color;
       letter-spacing:.2em;

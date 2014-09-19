@@ -1,66 +1,75 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: $primary-font;
-  font-size: 100%;
-  font-weight: 700;
-/*   font-weight: 400; */
-  text-transform: uppercase;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $primary-font;
+    font-size: 100%;
+    font-weight: 700;
+  /*   font-weight: 400; */
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom:16px;
+  }
 
-h1 {
-  font-size: 50px;
-  letter-spacing: -1.75px;
-  line-height: 50px;
-}
+  h1 {
+    font-size: 50px;
+    line-height:50px;
+    letter-spacing: -1.75px;
+    line-height: 50px;
+  }
 
-h2 {
-  font-size: 30px;
-  letter-spacing: -1.25px;
-}
+  h2 {
+    font-size: 32px;
+    line-height:32px;
+    letter-spacing: -1.25px;
+  }
 
- h3 {
-  font-size: 26px;
-  letter-spacing: -1px;
-}
+  h3 {
+    font-size: 26px;
+    line-height:28px;
+    letter-spacing: -1px;
+  }
 
-h4 {
-  font-size: 12px;
-  line-height:14px;
-  color: $tertiary-color;
-  letter-spacing:.2em;
-}
+  h4 {
+    font-size: 12px;
+    line-height:14px;
+    color: $tertiary-color;
+    letter-spacing:.2em;
+  }
 
 
-.work p, .recent-work p {
-  font-family: $primary-font;
-  font-weight: 400;
-  font-size:12px;
-  color: $tertiary-color;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-
-  a {
+  .work a, .recent-work a {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size:12px;
     color:$primary-action-color;
-    font-weight: 400;
+    letter-spacing:.2em;
+    text-transform:uppercase;
   }
-}
 
-p.copyright {
-  font-family:$secondary-font;
-  font-size:10px;
-  line-height:14px;
-  color: $tertiary-color;
-}
+  p.subtitle {
+    font-family:$secondary-font;
+    font-size:14px;
+    line-height:20px;
+    color: $tertiary-color;
+    text-transform:none;
+    letter-spacing:-.05em;
+  }
 
-p.bio-short {
-  @include span-columns(8);
-  @include shift(2);
-  margin-bottom:50px;
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
+  p.copyright {
+    font-family:$secondary-font;
+    font-size:10px;
+    line-height:14px;
+    color: $tertiary-color;
   }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(0);
+
+  p.bio-short {
+    @include span-columns(8);
+    @include shift(2);
+    margin-bottom:50px;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      @include span-columns(6);
+      @include shift(1);
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      @include span-columns(4);
+      @include shift(0);
+    }
   }
-}
