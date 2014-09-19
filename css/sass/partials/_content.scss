@@ -36,7 +36,10 @@ body {
 .header {
   z-index: 9999;
   height:82px;
-
+  .inner {
+    @include span-columns(10);
+    @include shift(1);
+  }
   a.site-title {
     position: absolute;
     z-index: 9999;
@@ -86,23 +89,27 @@ section:before,
 section:after { content:""; display:table; }
 section:after { clear: both; }
 section {
-  text-align: center;
   padding: 100px 0 0 0;
   border-bottom:1px solid #eee;
   background: $base-color;
+
 }
 
 section.intro {
   min-height: 480px;
-  text-align: left;
   padding-top: 0;
   background: none;
   h1 {
-    @include span-columns(11);
+    @include span-columns(10);
+    @include shift(1);
     margin-top:305px;
     color: $base-color;
+    text-align:left;
     @include media($mobile) { // As defined in _grid-settings.scss
-      margin-top:110px;
+      text-align:center;
+      width:100%;
+      padding:0 5%;
+      margin: 150px 0 0 0;
     }
   }
 
@@ -110,29 +117,33 @@ section.intro {
 
 .home {
   section.work {
-
-  img.teaser {
-    width:100%;
-    max-width: 692px;
-    display:block;
-    padding:0;
-    float:left;
-    padding-top:32px;
-  }
-    .inner  {
-      @include span-columns(5);
-      @include pad(60px 90px 0 90px);
+    @include outer-container;
+    img.teaser {
+      @include span-columns(8 of 12);
+      width:100%;
+      max-width: 692px;
+      display:block;
+      padding:0;
       float:right;
+      padding-top:32px;
+    }
+    .caption  {
+      @include span-columns(3 of 12);
+      @include shift(1);
+      float:left;
       text-align: left;
-      margin:0;
+      padding-top:200px;
       @include media($tablet) { // As defined in _grid-settings.scss
         text-align: center;
         width:100%;
+        margin:0;
+        padding:0 5%;
       }
       @include media($mobile) { // As defined in _grid-settings.scss
-          @include pad(0);
           text-align: center;
           width:100%;
+          margin:0;
+          padding:0 5%;
       }
 
     }
@@ -140,10 +151,19 @@ section.intro {
 
   section.work.alt {
     img.teaser {
-      float:right;
+      float:left;
     }
-    .inner {
-      float: left;
+    .caption {
+      @include row($direction: RTL);
+      @include shift(1);
+      float: right;
+      @include media($tablet) { // As defined in _grid-settings.scss
+        margin:0;
+      }
+      @include media($mobile) { // As defined in _grid-settings.scss
+        margin:0;
+      }
+
     }
   }
 }
