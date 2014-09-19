@@ -35,13 +35,15 @@
   }
 
 
-  .work a, .recent-work a {
+  .work p a, .recent-work p a {
     font-family: $primary-font;
     font-weight: 700;
     font-size:12px;
+    line-height:14px;
     color:$primary-action-color;
     letter-spacing:.2em;
     text-transform:uppercase;
+    
   }
 
   p.subtitle {
@@ -51,6 +53,7 @@
     color: $tertiary-color;
     text-transform:none;
     letter-spacing:-.05em;
+    margin-bottom:8px;
   }
 
   p.copyright {

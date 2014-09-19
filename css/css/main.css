@@ -8,7 +8,8 @@
 
 html, body {
   height: 100%;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: "Libre Baskerville", serif;
@@ -73,10 +74,11 @@ h4 {
   color: #9d9d9d;
   letter-spacing: .2em; }
 
-.work a, .recent-work a {
+.work p a, .recent-work p a {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
+  line-height: 14px;
   color: #09be77;
   letter-spacing: .2em;
   text-transform: uppercase; }
@@ -87,7 +89,8 @@ p.subtitle {
   line-height: 20px;
   color: #9d9d9d;
   text-transform: none;
-  letter-spacing: -.05em; }
+  letter-spacing: -.05em;
+  margin-bottom: 8px; }
 
 p.copyright {
   font-family: "Libre Baskerville", serif;
@@ -154,7 +157,7 @@ p.bio-short {
       padding: 0 10%; } }
   @media screen and (max-width: 480px) {
     .inner {
-      padding: 0 10%; } }
+      padding: 0 5%; } }
 
 /* Site header */
 .header {
@@ -228,7 +231,8 @@ section.intro {
   max-width: 692px;
   display: block;
   padding: 0;
-  float: left; }
+  float: left;
+  padding-top: 32px; }
 .home section.work .inner {
   float: left;
   display: block;
@@ -246,6 +250,7 @@ section.intro {
       width: 100%; } }
   @media screen and (max-width: 480px) {
     .home section.work .inner {
+      padding: 0;
       text-align: center;
       width: 100%; } }
 .home section.work.alt img.teaser {
@@ -296,20 +301,18 @@ section.recent-work {
         width: 50%; } }
   #dribbble-feed a img {
     width: 100%;
-    border: 1px solid #fff; }
-  #dribbble-feed a img:hover {
+    border: 1px solid #fff;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
     -o-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    /*
-            filter: none;
-            -webkit-filter: none;
-            -moz-filter: none;
-            -o-filter: none;
-            -ms-filter: none;
-    */ }
+    -ms-filter: grayscale(1); }
+  #dribbble-feed a img:hover {
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    -ms-filter: none; }
 
 /* Site footer */
 footer {
