@@ -22,9 +22,12 @@
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 24px;
     line-height:28px;
     letter-spacing: -1px;
+    font-weight: 400;
+    text-transform: none;
+
   }
 
   h4 {
@@ -35,7 +38,7 @@
   }
 
 
-  .work p a, .recent-work p a {
+  .work p a, .recent-work p a, a.sans {
     font-family: $primary-font;
     font-weight: 700;
     font-size:12px;
@@ -43,7 +46,7 @@
     color:$primary-action-color;
     letter-spacing:.2em;
     text-transform:uppercase;
-    
+
   }
 
   p.subtitle {

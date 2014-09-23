@@ -92,10 +92,54 @@ section {
   padding: 100px 0 0 0;
   border-bottom:1px solid #eee;
   background: $base-color;
+  @include outer-container;
+
+}
+.section-title{
+  @include span-columns(10);
+  @include shift(1);
+  margin-bottom: 32px;
+  @include media($tablet) { // As defined in _grid-settings.scss
+    float:none;
+    text-align:center;
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    float:none;
+    text-align:center;
+  }
+
+  h2 {
+    display:block;
+    float: left;
+    @include media($tablet) { // As defined in _grid-settings.scss
+
+      float:none;
+      text-align:center;
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      float:none;
+      text-align:center;
+    }
+    }
+
+    a {
+      float:right;
+      padding-top:10px;
+
+      @include media($tablet) { // As defined in _grid-settings.scss
+        float:none;
+        text-align:center;
+      }
+      @include media($mobile) { // As defined in _grid-settings.scss
+        float:none;
+        text-align:center;
+      }
+    }
+
 
 }
 
-section.intro {
+.intro {
   min-height: 480px;
   padding-top: 0;
   background: none;
@@ -116,8 +160,7 @@ section.intro {
 }
 
 .home {
-  section.work {
-    @include outer-container;
+  .work {
     img.teaser {
       @include span-columns(8 of 12);
       width:100%;
@@ -149,7 +192,7 @@ section.intro {
     }
   }
 
-  section.work.alt {
+  .work.alt {
     img.teaser {
       float:left;
     }
@@ -168,37 +211,34 @@ section.intro {
   }
 }
 
-
-section.recent-work{
-  text-align:left;
-  border-bottom:none;
-
-  .inner h2 {
-    float: left;
+.work.first {
+  img.teaser {
+    margin-top:-200px;
     @include media($tablet) { // As defined in _grid-settings.scss
-      float:none;
-      text-align:center;
+      margin-top:0px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      float:none;
-      text-align:center;
+      margin-top:0px;
     }
   }
-  .inner p a {
-    float: right;
-    margin-top:10px;
+  .caption  {
+    margin-top:-150px;
     @include media($tablet) { // As defined in _grid-settings.scss
-      float:none;
-      display:block;
-      text-align:center;
+        margin-top:0px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      float:none;
-      display:block;
-      text-align:center;
+        margin-top:0px;
     }
+
   }
+
 }
+
+.recent-work {
+  margin-top:20px;
+  border:none;
+}
+
 
 #dribbble-feed {
   list-style: none;

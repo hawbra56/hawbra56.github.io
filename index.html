@@ -9,14 +9,16 @@ layout: home
         <h1>{{ site.description }}</h1>
       </div>
     </section>
-    <section class="work">
-      <h2>Selected works</h2>
-      <a href="#">View All Work</a>
-    </section>
 
-    <section class="work alt">
+    <section class="work first alt">
+
+      <!-- <div class="section-title">
+        <h2>Selected works</h2>
+        <a href="#" class="sans">View All Work</a>
+      </div> -->
+
       <div class="caption">
-          <h2>River City leather</h2>
+          <h3>River City leather</h3>
           <p class="subtitle">Responsive Web Design, Front-End Development, Wordpress Ecommerce integration</p>
           <p><a href="#">View Case study</a></p>
       </div>
@@ -25,7 +27,7 @@ layout: home
 
     <section class="work">
         <div class="caption">
-          <h2>Milk Money</h2>
+          <h3>Milk Money</h3>
           <p class="subtitle">Web site/product Design, UX, Agile workflow</p>
           <p><a href="#">View Case study</a></p>
       </div>
@@ -33,12 +35,10 @@ layout: home
     </section>
 
     <section class="recent-work">
-      <div class="inner">
-        <h2>Some of my recent work</h2>
-        <p>
-        <a href="https://dribbble.com/{{ site.dribbble_username }}" class="large">Follow me on dribbble</a>
-      </p>
-      </div>
+        <div class="section-title">
+          <h2>Some of my recent work</h2>
+          <a href="https://dribbble.com/{{ site.dribbble_username }}" class="sans">Follow me on dribbble</a>
+        </div>
       <ul id="dribbble-feed"><!--Dribbble feed--></ul>
     </section>
 
