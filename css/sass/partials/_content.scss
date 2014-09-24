@@ -237,6 +237,7 @@ section {
 .recent-work {
   margin-top:20px;
   border:none;
+  padding-top:25px;
 }
 
 
@@ -246,9 +247,11 @@ section {
   width: 100%;
   margin:25px auto 0 auto;
 
-  li {
+  li a {
     float: left;
+    display:block;
     width:25%;
+    line-height:0;
     @include media($tablet) { // As defined in _grid-settings.scss
       width:50%;
     }
@@ -277,7 +280,7 @@ footer {
   background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
   text-align: center;
-  margin-top:100px;
+  padding-top:100px;
 
   .connect-links {
     list-style: none;

@@ -358,21 +358,24 @@ section {
 
 .recent-work {
   margin-top: 20px;
-  border: none; }
+  border: none;
+  padding-top: 25px; }
 
 #dribbble-feed {
   list-style: none;
   display: block;
   width: 100%;
   margin: 25px auto 0 auto; }
-  #dribbble-feed li {
+  #dribbble-feed li a {
     float: left;
-    width: 25%; }
+    display: block;
+    width: 25%;
+    line-height: 0; }
     @media screen and (max-width: 768px) {
-      #dribbble-feed li {
+      #dribbble-feed li a {
         width: 50%; } }
     @media screen and (max-width: 480px) {
-      #dribbble-feed li {
+      #dribbble-feed li a {
         width: 50%; } }
   #dribbble-feed a img {
     width: 100%;
@@ -392,7 +395,7 @@ footer {
   background: white;
   /*   border-top: 1px solid #e8e8e8; */
   text-align: center;
-  margin-top: 100px; }
+  padding-top: 100px; }
   footer .connect-links {
     list-style: none;
     text-align: center;
