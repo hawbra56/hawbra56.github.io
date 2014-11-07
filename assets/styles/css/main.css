@@ -146,6 +146,14 @@ p.bio-short {
   width: 85%;
   margin-left: 15%;
   background: white; }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      width: 90%;
+      margin-left: 10%; } }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      width: 90%;
+      margin-left: 10%; } }
 
 header, footer, section {
   width: 100%; }

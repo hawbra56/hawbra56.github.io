@@ -9,6 +9,14 @@ body {
   width:85%;
   margin-left:15%;
   background: $base-color;
+  @include media($tablet) { // As defined in _grid-settings.scss
+    width:90%;
+    margin-left:10%;
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    width:90%;
+    margin-left:10%;
+  }
 
 }
 
