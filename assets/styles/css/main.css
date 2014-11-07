@@ -180,18 +180,24 @@ header, footer, section {
     left: -40px;
     height: 141px;
     width: 141px;
-    display: block;
-    -webkit-filter: invert(100%); }
+    display: block; }
     @media screen and (max-width: 768px) {
       .header a.site-title {
+        left: -30px; } }
+    @media screen and (max-width: 480px) {
+      .header a.site-title {
+        left: -20px; } }
+  .header a.site-title img {
+    position: fixed;
+    -webkit-filter: invert(100%); }
+    @media screen and (max-width: 768px) {
+      .header a.site-title img {
         height: 100px;
         width: 100px; } }
     @media screen and (max-width: 480px) {
-      .header a.site-title {
+      .header a.site-title img {
         height: 75px;
         width: 75px; } }
-  .header a.site-title img {
-    position: fixed; }
   .header a.site-title:hover {
     opacity: 0.5; }
   .header .site-nav {

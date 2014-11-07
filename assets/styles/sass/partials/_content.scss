@@ -43,6 +43,16 @@ header, footer, section {
     height:141px;
     width:141px;
     display:block;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      left:-30px;
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      left:-20px;
+    }
+
+  }
+  a.site-title img{
+    position: fixed;
     -webkit-filter: invert(100%);
     @include media($tablet) { // As defined in _grid-settings.scss
       height:100px;
@@ -53,7 +63,6 @@ header, footer, section {
       width:75px;
     }
   }
-  a.site-title img{ position: fixed;}
   a.site-title:hover{
     opacity: 0.5;
   }
