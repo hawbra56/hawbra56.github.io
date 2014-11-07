@@ -19,8 +19,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background: #0cfab4 url("../../images/bg-green-mountains.jpg") fixed;
-  background-size: cover;
+
+  background-color:#0cfab4;
+  background-size: 100%;
+  background-image: url("../../images/bg-green-mountains.jpg");
+  background-attachment: fixed;
 }
 
 a         {
