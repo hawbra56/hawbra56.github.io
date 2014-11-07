@@ -24,15 +24,17 @@ body {
 }
 .background-image {
 
-    z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
   background-image: url("../../images/bg-green-mountains.jpg");
-  background-attachment: fixed;
+
+  background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-position: left top;
+        background-repeat: no-repeat;
 }
 
 a         {
