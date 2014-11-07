@@ -135,7 +135,7 @@ p.bio-short {
   margin-left: 15%;
   background: white; }
 
-.background, header, footer, section {
+header, footer, section {
   width: 100%; }
 
 .inner:before,
@@ -156,12 +156,6 @@ p.bio-short {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 768px) {
-    .inner {
-      padding: 0 10%; } }
-  @media screen and (max-width: 480px) {
-    .inner {
-      padding: 0 5%; } }
 
 /* Site header */
 .header {
@@ -209,14 +203,7 @@ section:after {
 section {
   padding: 100px 0 0 0;
   border-bottom: 1px solid #eee;
-  background: white;
-  max-width: none;
-  margin-left: auto;
-  margin-right: auto; }
-  section:after {
-    content: "";
-    display: table;
-    clear: both; }
+  background: white; }
 
 .section-title {
   float: left;
@@ -280,7 +267,7 @@ section {
         padding: 0 5%;
         margin: 150px 0 0 0; } }
 
-.home .work img.teaser {
+.work img.teaser {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -291,9 +278,15 @@ section {
   padding: 0;
   float: right;
   padding-top: 32px; }
-  .home .work img.teaser:last-child {
+  .work img.teaser:last-child {
     margin-right: 0; }
-.home .work .caption {
+  @media screen and (max-width: 768px) {
+    .work img.teaser {
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .work img.teaser {
+      width: 100%; } }
+.work .caption {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -302,35 +295,35 @@ section {
   float: left;
   text-align: left;
   padding-top: 200px; }
-  .home .work .caption:last-child {
+  .work .caption:last-child {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
-    .home .work .caption {
+    .work .caption {
       text-align: center;
       width: 100%;
       margin: 0;
       padding: 0 5%; } }
   @media screen and (max-width: 480px) {
-    .home .work .caption {
+    .work .caption {
       text-align: center;
       width: 100%;
       margin: 0;
       padding: 0 5%; } }
-.home .work.alt img.teaser {
+.work .work.alt img.teaser {
   float: left; }
-.home .work.alt .caption {
+.work .work.alt .caption {
   display: block;
   margin-right: 8.5298%;
   float: right; }
-  .home .work.alt .caption:after {
+  .work .work.alt .caption:after {
     content: "";
     display: table;
     clear: both; }
   @media screen and (max-width: 768px) {
-    .home .work.alt .caption {
+    .work .work.alt .caption {
       margin: 0; } }
   @media screen and (max-width: 480px) {
-    .home .work.alt .caption {
+    .work .work.alt .caption {
       margin: 0; } }
 
 .work.first img.teaser {
