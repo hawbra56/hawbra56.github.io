@@ -182,6 +182,14 @@ header, footer, section {
     width: 141px;
     display: block;
     -webkit-filter: invert(100%); }
+    @media screen and (max-width: 768px) {
+      .header a.site-title {
+        height: 100px;
+        width: 100px; } }
+    @media screen and (max-width: 480px) {
+      .header a.site-title {
+        height: 75px;
+        width: 75px; } }
   .header a.site-title img {
     position: fixed; }
   .header a.site-title:hover {

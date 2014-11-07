@@ -44,6 +44,14 @@ header, footer, section {
     width:141px;
     display:block;
     -webkit-filter: invert(100%);
+    @include media($tablet) { // As defined in _grid-settings.scss
+      height:100px;
+      width:100px;
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      height:75px;
+      width:75px;
+    }
   }
   a.site-title img{ position: fixed;}
   a.site-title:hover{
