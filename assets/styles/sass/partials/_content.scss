@@ -4,10 +4,17 @@ body {
 
 }
 
+.wrapper {
+  position:relative;
+  width:85%;
+  margin-left:15%;
+  background: $base-color;
+
+}
+
 .background, header, footer, section {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+
 }
 
 
@@ -16,9 +23,7 @@ body {
 .inner:after { clear: both; }
 .inner {
   @include outer-container;
-
   position: relative;
-  margin: 0 auto;
   zoom: 1;
 
   @include media($tablet) { // As defined in _grid-settings.scss
@@ -36,24 +41,23 @@ body {
 .header {
   z-index: 9999;
   height:82px;
-  .inner {
-    @include span-columns(10);
-    @include shift(1);
-  }
+
   a.site-title {
     position: absolute;
     z-index: 9999;
     top:-22px;
-    right:0;
+    left:-40px;
     height:141px;
     width:141px;
     display:block;
+    -webkit-filter: invert(100%);
   }
+  a.site-title img{ position: fixed;}
   a.site-title:hover{
     opacity: 0.5;
   }
   .site-nav {
-    float:left;
+    float:right;
     line-height: 85px;
     font-family: $primary-font;
     font-weight:700;
@@ -67,7 +71,7 @@ body {
   .site-nav .page-link {
     font-size: 12px;
     margin-right: 40px;
-    color: #fff;
+    color: #000;
     letter-spacing: 2px;
   }
   .site-nav .page-link:hover{
@@ -81,9 +85,6 @@ body {
 /* Page Content styles */
 /* ----------------------------------------------------------*/
 
-.background {
-  background: $base-color url("../../../images/bg-hero-1.png") no-repeat left top;
-}
 
 section:before,
 section:after { content:""; display:table; }
@@ -147,7 +148,7 @@ section {
     @include span-columns(10);
     @include shift(1);
     margin-top:305px;
-    color: $base-color;
+    color: #000;
     text-align:left;
     @include media($mobile) { // As defined in _grid-settings.scss
       text-align:center;
