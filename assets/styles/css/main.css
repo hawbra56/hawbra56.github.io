@@ -16,7 +16,15 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: #0cfab4;
+  background-color: #0cfab4; }
+
+.background-image {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-size: 100%;
   background-image: url("../../images/bg-green-mountains.jpg");
   background-attachment: fixed; }
