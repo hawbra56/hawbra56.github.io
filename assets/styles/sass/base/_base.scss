@@ -23,19 +23,18 @@ body {
 
 }
 .background-image {
-
   background-image: url("../../images/bg-green-mountains.jpg");
-
-  background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
+  background-size:  975px 1505px;
+  -webkit-background-size:  975px 1505px;
+  -moz-background-size:  975px 1505px;
+  -o-background-size:  975px 1505px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
 }
+
 
 a         {
   color: $primary-action-color;
