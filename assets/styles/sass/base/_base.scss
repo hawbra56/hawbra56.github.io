@@ -41,8 +41,8 @@ a         {
   text-decoration: none;
   cursor:pointer;
 }
-a:hover   { color: $primary-action-color; text-decoration: none; }
-a:visited { color: #205caa; }
+a:hover, .caption a:hover   { color: $tertiary-color; text-decoration: none; }
+a:visited { color: $primary-action-color; }
 
 p {
   font-size:16px;

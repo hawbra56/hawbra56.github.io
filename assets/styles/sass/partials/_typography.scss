@@ -1,30 +1,29 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: $primary-font;
     font-size: 100%;
-    font-weight: 700;
-  /*   font-weight: 400; */
+    font-weight: 400;
     color: $secondary-color;
     margin-bottom:16px;
   }
 
   h1 {
-    font-size: 50px;
-    line-height:50px;
+    font-size: 36px;
+    line-height:48px;
     letter-spacing: -1.75px;
-    line-height: 50px;
+    span {
+      color: $tertiary-color;
+    }
   }
 
   h2 {
     font-size: 32px;
-    line-height:32px;
+    line-height:38px;
     letter-spacing: -1.25px;
   }
 
-
-
   h3 {
     font-size: 24px;
-    line-height:28px;
+    line-height:32px;
     letter-spacing: -1px;
     font-weight: 400;
     text-transform: none;
@@ -36,19 +35,11 @@
     line-height:14px;
     color: $tertiary-color;
     letter-spacing:.2em;
-  }
-
-
-  .work p a, .recent-work p a, a.sans {
-    font-family: $primary-font;
-    font-weight: 700;
-    font-size:12px;
-    line-height:14px;
-    color:$primary-action-color;
-    letter-spacing:.2em;
     text-transform:uppercase;
-
   }
+
+
+
 
   p.subtitle {
     font-family:$secondary-font;
@@ -68,15 +59,7 @@
   }
 
   p.bio-short {
-    @include span-columns(8);
-    @include shift(2);
+    color:$tertiary-color;
     margin-bottom:50px;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      @include span-columns(6);
-      @include shift(1);
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      @include span-columns(4);
-      @include shift(0);
-    }
+  
   }

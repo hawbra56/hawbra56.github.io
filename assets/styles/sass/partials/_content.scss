@@ -6,8 +6,8 @@ body {
 
 .wrapper {
   position:relative;
-  width:85%;
-  margin-left:15%;
+  width:87%;
+  margin-left:13%;
   background: $base-color;
   @include media($tablet) { // As defined in _grid-settings.scss
     width:90%;
@@ -20,18 +20,29 @@ body {
 
 }
 
-header, footer, section {
-  width: 100%;
-}
-
-
-.inner:before,
-.inner:after { content:""; display:table; }
-.inner:after { clear: both; }
-.inner {
+.content {
   @include outer-container;
   position: relative;
   zoom: 1;
+
+}
+
+header, footer, section {
+  width: 100%;
+
+}
+
+
+section:before, section:after { content:""; display:table; }
+section:after { clear: both; }
+section {
+
+  @include media($tablet) { // As defined in _grid-settings.scss
+    padding:0 10%;
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    padding:0 10%;
+  }
 
 }
 
@@ -47,7 +58,7 @@ header, footer, section {
     position: absolute;
     z-index: 9999;
     top:-22px;
-    left:-40px;
+    left:-22px;
     height:141px;
     width:141px;
     display:block;
@@ -61,14 +72,20 @@ header, footer, section {
   }
   a.site-title img{
     position: fixed;
+    filter: invert(100%);
+    // Browser Specific
     -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -o-filter: invert(100%);
+    -ms-filter: invert(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
     @include media($tablet) { // As defined in _grid-settings.scss
       height:100px;
       width:100px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      height:75px;
-      width:75px;
+      height:100px;
+      width:100px;
     }
   }
   a.site-title:hover{
@@ -93,6 +110,7 @@ header, footer, section {
     letter-spacing: 2px;
   }
   .site-nav .page-link:hover{
+    color:$tertiary-color;
     text-decoration:none;
   }
 }
@@ -113,58 +131,15 @@ section {
   background: $base-color;
 
 }
-.section-title{
-  @include span-columns(10);
-  @include shift(1);
-  margin-bottom: 32px;
-  @include media($tablet) { // As defined in _grid-settings.scss
-    float:none;
-    text-align:center;
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    float:none;
-    text-align:center;
-  }
-
-  h2 {
-    display:block;
-    float: left;
-    @include media($tablet) { // As defined in _grid-settings.scss
-
-      float:none;
-      text-align:center;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      float:none;
-      text-align:center;
-    }
-    }
-
-    a {
-      float:right;
-      padding-top:10px;
-
-      @include media($tablet) { // As defined in _grid-settings.scss
-        float:none;
-        text-align:center;
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        float:none;
-        text-align:center;
-      }
-    }
-
-
-}
 
 .intro {
-  min-height: 480px;
   padding-top: 0;
   background: none;
+  border-bottom:none;
   h1 {
-    @include span-columns(10);
+    @include span-columns(8);
     @include shift(1);
-    margin-top:305px;
+    margin-top:150px;
     color: #000;
     text-align:left;
     @include media($mobile) { // As defined in _grid-settings.scss
@@ -212,32 +187,31 @@ section {
           margin:0;
           padding:0 5%;
       }
-
     }
 
+}
 
-  .work.alt {
-    img.teaser {
-      float:left;
+.work.alt {
+  img.teaser {
+    float:left;
+  }
+  .caption {
+    @include row($direction: LTR);
+    @include shift(1);
+    float: right;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      margin:0;
     }
-    .caption {
-      @include row($direction: RTL);
-      @include shift(1);
-      float: right;
-      @include media($tablet) { // As defined in _grid-settings.scss
-        margin:0;
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        margin:0;
-      }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      margin:0;
+    }
 
-    }
   }
 }
 
 .work.first {
   img.teaser {
-    margin-top:-200px;
+    /* margin-top:-200px; */
     @include media($tablet) { // As defined in _grid-settings.scss
       margin-top:0px;
     }
@@ -257,6 +231,58 @@ section {
   }
 
 }
+
+.section-title{
+  @include span-columns(10);
+  @include shift(1);
+  margin-bottom: 32px;
+
+  @include media($tablet) { // As defined in _grid-settings.scss
+    float:none;
+    text-align: center;
+    width:100%;
+    margin:0;
+    padding:0 10%;
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    float:none;
+    text-align: center;
+    width:100%;
+    margin:0;
+    padding:0 10%;
+  }
+
+  h2 {
+    display:block;
+    float: left;
+    @include media($tablet) { // As defined in _grid-settings.scss
+
+      float:none;
+      text-align:center;
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      float:none;
+      text-align:center;
+    }
+    }
+
+    a {
+      float:right;
+      padding-top:10px;
+
+      @include media($tablet) { // As defined in _grid-settings.scss
+        float:none;
+        text-align:center;
+      }
+      @include media($mobile) { // As defined in _grid-settings.scss
+        float:none;
+        text-align:center;
+      }
+    }
+
+
+}
+
 
 .recent-work {
   margin-top:25px;
@@ -302,12 +328,23 @@ section {
 footer {
   background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
-  text-align: center;
-  margin-top:100px;
 
+  padding:100px 0;
+.inner{
+  @include span-columns(8);
+  @include shift(1);
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    @include shift(1);
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(0);
+  }
+}
   .connect-links {
     list-style: none;
-    text-align:center;
+    float:left;
     margin: 0 0 50px 0;
 
     li {
@@ -319,6 +356,9 @@ footer {
     li:last-child {
       border-right:none;
     }
+    li:first-child {
+      padding-left:0;
+    }
     li a{
       font-family: $primary-font;
       font-weight: 700;
@@ -326,6 +366,9 @@ footer {
       color:$primary-action-color;
       letter-spacing:.2em;
       text-transform:uppercase;
+    }
+    li a:hover{
+      color:$tertiary-color;
     }
   }
 }
@@ -502,94 +545,4 @@ footer {
   .post-content ol { padding-left: 10px; }
 
 
-}
-
-
-
-/*----------------------------------------------------------------------------*\
-    Headhesive Specific Styles
-/*----------------------------------------------------------------------------*/
-
-/**
- * Headhesive element clone
- * > `clone` class for the cloned element:
- *
- |  var options = {
- |      classes {
- |          clone: 'banner--clone';
- |      }
- |  }
- *
- */
-.header--clone {
-
-    /* Required styles */
-    position: fixed;
-    max-width:none;
-    top: 0;
-    left: 0;
-
-    /* Translate -100% to move off screen */
-    -webkit-transform: translateY(-150%);
-        -ms-transform: translateY(-150%);
-            transform: translateY(-150%);
-
-    /* Animations */
-    -webkit-transition: all 300ms ease-in-out;
-       -moz-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out;
-
-      .fixed {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.9); // white
-        border-bottom:1px solid #eee;
-      }
-      .site-nav .page-link {
-        color: #000;
-      }
-      a.site-title img{
-        -webkit-filter: invert(100%);
-        filter:Invert;
-        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix type=\'matrix\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#invert");
-      }
-
-}
-
-
-
-/**
- * Headhesive stick
- * > `stick` class for the cloned element:
- *
- |  var options = {
- |      classes {
- |          stick: 'banner--stick';
- |      }
- |  }
- *
- */
-.header--stick {
-
-    /* Translate back to 0%; */
-    -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-            transform: translateY(0%);
-}
-
-
-/**
- * Headhesive unstick
- * > `unstick` class for the cloned element:
- *
- |  var options = {
- |      classes {
- |          unstick: 'banner--unstick';
- |      }
- |  }
- *
- */
-.header--unstick {
-    /* Not required to use, but could be useful to have */
 }
