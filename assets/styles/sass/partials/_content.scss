@@ -17,39 +17,33 @@ body {
     width:90%;
     margin-left:10%;
   }
-
 }
 
 .content {
   @include outer-container;
   position: relative;
   zoom: 1;
-
 }
 
-
-
-
-section:before, section:after { content:""; display:table; }
-section:after { clear: both; }
-section {
-
+.inner {
+  @include span-columns(10);
+  @include shift(1);
   @include media($tablet) { // As defined in _grid-settings.scss
-    padding:0 10%;
+    @include span-columns(6);
+    @include shift(1);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    padding:0 10%;
+    @include span-columns(4);
+    @include shift(1);
   }
 
 }
-
 
 
 /* Site header */
 
 .header {
   z-index: 9999;
-  height:82px;
 
   a.site-title {
     position: absolute;
@@ -85,43 +79,44 @@ section {
   a.site-title:hover{
     opacity: 0.5;
   }
-  .site-nav {
-    @include span-columns(10);
+
+}
+
+/* Navigation */
+/* ----------------------------------------------------------*/
+
+
+.site-nav {
+  @include span-columns(10);
+  @include shift(1);
+  float:left;
+  line-height: 85px;
+  font-family: $primary-font;
+  font-weight:700;
+  text-transform: uppercase;
+  margin-bottom:50px;
+
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
     @include shift(1);
-    float:left;
-    line-height: 85px;
-    font-family: $primary-font;
-    font-weight:700;
-    text-transform: uppercase;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      @include span-columns(6);
-      @include shift(1);
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      @include span-columns(4);
-      @include shift(1);
-    }
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(1);
   }
 
-  .site-nav .menu-icon {
-    display: none;
-    }
-
-  .site-nav .page-link {
+  li { list-style:none;}
+  li a {
     font-size: 12px;
     margin-right: 40px;
     color: #000;
     letter-spacing: 2px;
   }
-  .site-nav .page-link:hover{
+  li a:hover{
     color:$tertiary-color;
     text-decoration:none;
   }
-
 }
-
-
-
 
 /* Page Content styles */
 /* ----------------------------------------------------------*/
@@ -131,20 +126,34 @@ section:before,
 section:after { content:""; display:table; }
 section:after { clear: both; }
 section {
-  padding: 100px 0 0 0;
+  padding: 50px 0 50px 0;
   border-bottom:1px solid #eee;
   background: $base-color;
 
 }
 
+.section-title{
+  @include span-columns(10);
+  @include shift(1);
+  margin-bottom: 32px;
+
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    @include shift(1);
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(1);
+  }
+}
+
+ section.artwork img {width: 100%;}
 .intro {
-  padding-top: 0;
+  padding:150px 0 50px 0;
   background: none;
-  border-bottom:none;
   h1 {
     @include span-columns(8);
     @include shift(1);
-    margin-top:150px;
     color: #000;
     text-align:left;
     @include media($tablet) { // As defined in _grid-settings.scss
@@ -159,8 +168,25 @@ section {
 
 }
 
+.project-intro {
+  padding:0 0 25px 0;
+  background: none;
+  border:none;
+  @include span-columns(10);
+  @include shift(1);
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    @include shift(1);
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(1);
+  }
+
+}
 
   .work {
+    padding-bottom: 0;
     img.teaser {
       @include span-columns(8 of 12);
       width:100%;
@@ -227,24 +253,9 @@ section {
 
 }
 
-.section-title{
-  @include span-columns(10);
-  @include shift(1);
-  margin-bottom: 32px;
-
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
-  }
-}
-
 
 .recent-work {
-  margin-top:25px;
+  padding:100px 0 0 0;
   border:none;
 }
 
@@ -281,6 +292,7 @@ section {
       }
 
     }
+
 
 /* Site footer */
 

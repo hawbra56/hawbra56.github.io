@@ -12,8 +12,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 body {
   font-family: $secondary-font;
   font-size: 16px;
@@ -41,7 +39,10 @@ a         {
   text-decoration: none;
   cursor:pointer;
 }
-a:hover, .caption a:hover   { color: $tertiary-color; text-decoration: none; }
+a:hover,
+section a:hover,
+.caption a:hover,
+footer a:hover   { color: $tertiary-color; text-decoration: none; }
 a:visited { color: $primary-action-color; }
 
 p {

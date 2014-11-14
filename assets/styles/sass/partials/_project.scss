@@ -1,0 +1,13 @@
+section .description {
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($tablet) { // As defined in _grid-settings.scss
+    @include span-columns(6);
+    @include shift(1);
+  }
+  @include media($mobile) { // As defined in _grid-settings.scss
+    @include span-columns(4);
+    @include shift(1);
+  }
+}
