@@ -159,18 +159,19 @@ section:after {
     position: absolute;
     z-index: 9999;
     top: -22px;
-    left: -22px;
+    right: 40px;
     height: 141px;
     width: 141px;
     display: block; }
     @media screen and (max-width: 768px) {
       .header a.site-title {
-        left: -30px; } }
+        right: 40px; } }
     @media screen and (max-width: 480px) {
       .header a.site-title {
-        left: -20px; } }
+        right: 40px; } }
   .header a.site-title img {
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
     filter: invert(100%);
     -webkit-filter: invert(100%);
     -moz-filter: invert(100%);
@@ -188,11 +189,18 @@ section:after {
   .header a.site-title:hover {
     opacity: 0.5; }
   .header .site-nav {
-    float: right;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 8.5298%;
+    float: left;
     line-height: 85px;
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
     text-transform: uppercase; }
+    .header .site-nav:last-child {
+      margin-right: 0; }
   .header .site-nav .menu-icon {
     display: none; }
   .header .site-nav .page-link {
@@ -421,13 +429,7 @@ footer {
           margin-right: 0; } }
     @media screen and (max-width: 480px) {
       footer .inner {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 100%;
-        margin-left: 0%; }
-        footer .inner:last-child {
-          margin-right: 0; } }
+        padding: 0 1%; } }
   footer .connect-links {
     list-style: none;
     float: left;
@@ -558,11 +560,9 @@ footer {
     z-index: 10;
     top: 14px;
     right: 8px;
-    background-color: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #e8e8e8; }
+    background-color: red;
+    height: 10px;
+    width: 10px; }
 
   .site-nav .menu-icon {
     display: block;

@@ -58,20 +58,21 @@ section {
     position: absolute;
     z-index: 9999;
     top:-22px;
-    left:-22px;
+    right:40px;
     height:141px;
     width:141px;
     display:block;
     @include media($tablet) { // As defined in _grid-settings.scss
-      left:-30px;
+      right:40px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      left:-20px;
+      right:40px;
     }
 
   }
   a.site-title img{
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
     filter: invert(100%);
     // Browser Specific
     -webkit-filter: invert(100%);
@@ -92,7 +93,9 @@ section {
     opacity: 0.5;
   }
   .site-nav {
-    float:right;
+    @include span-columns(8);
+    @include shift(1);
+    float:left;
     line-height: 85px;
     font-family: $primary-font;
     font-weight:700;
@@ -255,15 +258,15 @@ section {
   h2 {
     display:block;
     float: left;
-    @include media($tablet) { // As defined in _grid-settings.scss
+      @include media($tablet) { // As defined in _grid-settings.scss
 
-      float:none;
-      text-align:center;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      float:none;
-      text-align:center;
-    }
+        float:none;
+        text-align:center;
+      }
+      @include media($mobile) { // As defined in _grid-settings.scss
+        float:none;
+        text-align:center;
+      }
     }
 
     a {
@@ -338,8 +341,7 @@ footer {
     @include shift(1);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(0);
+    padding: 0 1%;
   }
 }
   .connect-links {
@@ -501,11 +503,9 @@ footer {
     position: fixed;
     z-index: 10;
     top: 14px; right: 8px;
-    background-color: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #e8e8e8;
+    background-color: red;
+    height:10px;
+    width:10px;
   }
 
   .site-nav .menu-icon {
