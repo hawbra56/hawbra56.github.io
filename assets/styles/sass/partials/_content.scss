@@ -27,10 +27,7 @@ body {
 
 }
 
-header, footer, section {
-  width: 100%;
 
-}
 
 
 section:before, section:after { content:""; display:table; }
@@ -56,23 +53,20 @@ section {
 
   a.site-title {
     position: absolute;
-    z-index: 9999;
+    z-index: 2;
     top:-22px;
     right:40px;
-    height:141px;
-    width:141px;
     display:block;
     @include media($tablet) { // As defined in _grid-settings.scss
-      right:40px;
+      right:10px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      right:40px;
+
     }
 
   }
   a.site-title img{
     /* position: fixed; */
-    position: relative;
     filter: invert(100%);
     // Browser Specific
     -webkit-filter: invert(100%);
@@ -81,25 +75,32 @@ section {
     -ms-filter: invert(100%);
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
     @include media($tablet) { // As defined in _grid-settings.scss
-      height:100px;
-      width:100px;
+      height:120px;
+      width:120px;
     }
     @include media($mobile) { // As defined in _grid-settings.scss
-      height:100px;
-      width:100px;
+
     }
   }
   a.site-title:hover{
     opacity: 0.5;
   }
   .site-nav {
-    @include span-columns(8);
+    @include span-columns(10);
     @include shift(1);
     float:left;
     line-height: 85px;
     font-family: $primary-font;
     font-weight:700;
     text-transform: uppercase;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      @include span-columns(6);
+      @include shift(1);
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      @include span-columns(4);
+      @include shift(1);
+    }
   }
 
   .site-nav .menu-icon {
@@ -116,6 +117,7 @@ section {
     color:$tertiary-color;
     text-decoration:none;
   }
+
 }
 
 
@@ -145,11 +147,13 @@ section {
     margin-top:150px;
     color: #000;
     text-align:left;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      @include span-columns(6);
+      @include shift(1);
+    }
     @include media($mobile) { // As defined in _grid-settings.scss
-      text-align:center;
-      width:100%;
-      padding:0 5%;
-      margin: 150px 0 0 0;
+      @include span-columns(4);
+      @include shift(1);
     }
   }
 
@@ -179,16 +183,13 @@ section {
       text-align: left;
       padding-top:200px;
       @include media($tablet) { // As defined in _grid-settings.scss
-        text-align: center;
-        width:100%;
-        margin:0;
-        padding:0 5%;
+        padding-top:0;
+        @include span-columns(6);
+        @include shift(1);
       }
       @include media($mobile) { // As defined in _grid-settings.scss
-          text-align: center;
-          width:100%;
-          margin:0;
-          padding:0 5%;
+        @include span-columns(4);
+        @include shift(1);
       }
     }
 
@@ -199,15 +200,12 @@ section {
     float:left;
   }
   .caption {
-    @include row($direction: LTR);
-    @include shift(1);
-    float: right;
+      @include row($direction: LTR);
+      float: right;
     @include media($tablet) { // As defined in _grid-settings.scss
-      margin:0;
+      float: left;
     }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      margin:0;
-    }
+
 
   }
 }
@@ -218,16 +216,10 @@ section {
     @include media($tablet) { // As defined in _grid-settings.scss
       margin-top:0px;
     }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      margin-top:0px;
-    }
   }
   .caption  {
-    margin-top:-150px;
+    padding-top:0px;
     @include media($tablet) { // As defined in _grid-settings.scss
-        margin-top:0px;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
         margin-top:0px;
     }
 
@@ -241,49 +233,13 @@ section {
   margin-bottom: 32px;
 
   @include media($tablet) { // As defined in _grid-settings.scss
-    float:none;
-    text-align: center;
-    width:100%;
-    margin:0;
-    padding:0 10%;
+    @include span-columns(6);
+    @include shift(1);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    float:none;
-    text-align: center;
-    width:100%;
-    margin:0;
-    padding:0 10%;
+    @include span-columns(4);
+    @include shift(1);
   }
-
-  h2 {
-    display:block;
-    float: left;
-      @include media($tablet) { // As defined in _grid-settings.scss
-
-        float:none;
-        text-align:center;
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        float:none;
-        text-align:center;
-      }
-    }
-
-    a {
-      float:right;
-      padding-top:10px;
-
-      @include media($tablet) { // As defined in _grid-settings.scss
-        float:none;
-        text-align:center;
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        float:none;
-        text-align:center;
-      }
-    }
-
-
 }
 
 
@@ -331,19 +287,19 @@ section {
 footer {
   background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
-
   padding:100px 0;
-.inner{
-  @include span-columns(8);
+  @include span-columns(10);
   @include shift(1);
+
   @include media($tablet) { // As defined in _grid-settings.scss
     @include span-columns(6);
     @include shift(1);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    padding: 0 1%;
+    @include span-columns(4);
+    @include shift(1);
   }
-}
+
   .connect-links {
     list-style: none;
     float:left;
@@ -496,45 +452,6 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-
-
-
-  .site-nav {
-    position: fixed;
-    z-index: 10;
-    top: 14px; right: 8px;
-    background-color: red;
-    height:10px;
-    width:10px;
-  }
-
-  .site-nav .menu-icon {
-    display: block;
-    font-size: 24px;
-    color: #505050;
-    float: right;
-    width: 36px;
-    text-align: center;
-    line-height: 36px;
-  }
-
-  .site-nav .menu-icon svg { width: 18px; height: 16px; }
-
-  .site-nav .trigger {
-    clear: both;
-    margin-bottom: 5px;
-    display: none;
-  }
-
-  .site-nav:hover .trigger { display: block; }
-
-  .site-nav .page-link {
-    display: block;
-    text-align: right;
-    line-height: 1.25;
-    padding: 5px 10px;
-    margin: 0;
-  }
 
   .post-header h1 { font-size: 36px; }
   .post-content h2 { font-size: 28px; }
