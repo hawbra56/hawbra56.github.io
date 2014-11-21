@@ -14,8 +14,8 @@ body {
     margin-left:10%;
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    width:90%;
-    margin-left:10%;
+    width:92%;
+    margin-left:8%;
   }
 }
 
@@ -28,6 +28,7 @@ body {
 .inner {
   @include span-columns(10);
   @include shift(1);
+  img {width:100%;}
   @include media($tablet) { // As defined in _grid-settings.scss
     @include span-columns(6);
     @include shift(1);
@@ -133,21 +134,9 @@ section {
 }
 
 .section-title{
-  @include span-columns(10);
-  @include shift(1);
   margin-bottom: 32px;
-
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
-  }
 }
 
- section.artwork img {width: 100%;}
 .intro {
   padding:150px 0 50px 0;
   background: none;
@@ -172,16 +161,6 @@ section {
   padding:0 0 25px 0;
   background: none;
   border:none;
-  @include span-columns(10);
-  @include shift(1);
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
-  }
 
 }
 
@@ -300,17 +279,6 @@ footer {
   background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
   padding:100px 0;
-  @include span-columns(10);
-  @include shift(1);
-
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
-  }
 
   .connect-links {
     list-style: none;

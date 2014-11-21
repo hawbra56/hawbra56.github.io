@@ -39,7 +39,16 @@
   }
 
 
+p {
+  font-size:16px;
+  line-height: 32px;
+  margin-bottom:16px;
+}
+p.bio-short {
+  color:$tertiary-color;
+  margin-bottom:50px;
 
+}
 
   p.subtitle {
     font-family:$secondary-font;
@@ -56,10 +65,4 @@
     font-size:10px;
     line-height:14px;
     color: $tertiary-color;
-  }
-
-  p.bio-short {
-    color:$tertiary-color;
-    margin-bottom:50px;
-  
   }
