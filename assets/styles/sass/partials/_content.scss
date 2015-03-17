@@ -23,6 +23,8 @@ body {
   @include outer-container;
   position: relative;
   zoom: 1;
+  overflow:hidden;
+
 }
 
 .inner {
@@ -30,12 +32,10 @@ body {
   @include shift(1);
   img {width:100%;}
   @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
+    @include span-columns(7);
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
+    @include span-columns(5);
   }
 
 }
@@ -98,12 +98,10 @@ body {
   margin-bottom:50px;
 
   @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(6);
-    @include shift(1);
+
   }
   @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(4);
-    @include shift(1);
+    
   }
 
   li { list-style:none;}
@@ -147,11 +145,9 @@ section {
     text-align:left;
     @include media($tablet) { // As defined in _grid-settings.scss
       @include span-columns(6);
-      @include shift(1);
     }
     @include media($mobile) { // As defined in _grid-settings.scss
       @include span-columns(4);
-      @include shift(1);
     }
   }
 
@@ -166,21 +162,28 @@ section {
 
   .work {
     padding-bottom: 0;
-    img.teaser {
-      @include span-columns(8 of 12);
-      width:100%;
-      max-width: 692px;
-      display:block;
-      padding:0;
+    .teaser {
+      @include span-columns(7 of 12);
+      @include shift(1);
       float:right;
-      padding-top:32px;
-      @include media($tablet) {
-          width:100%;
+      img {
+        width:100%;
+        display:block;
+        padding:0;
+        padding-top:32px;
+        margin:0;
       }
-      @include media($mobile) {
-          width:100%;
+      @include media($tablet) { // As defined in _grid-settings.scss
+        @include span-columns(6);
+        @include shift(0);
       }
+      @include media($mobile) { // As defined in _grid-settings.scss
+        @include span-columns(6);
+        @include shift(0);
+      }
+
     }
+
     .caption  {
       @include span-columns(3 of 12);
       @include shift(1);
@@ -190,46 +193,62 @@ section {
       @include media($tablet) { // As defined in _grid-settings.scss
         padding-top:0;
         @include span-columns(6);
-        @include shift(1);
       }
       @include media($mobile) { // As defined in _grid-settings.scss
         @include span-columns(4);
-        @include shift(1);
       }
     }
+
+}
+.work .teaser:last-child {
+  margin-right:-20px;
 
 }
 
 .work.alt {
-  img.teaser {
+  .teaser{
     float:left;
+    margin-left:-20px;
+    @include media($tablet) { // As defined in _grid-settings.scss
+      @include span-columns(6);
+      @include shift(1);
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      @include span-columns(6);
+      @include shift(0);
+    }
+
   }
+
   .caption {
       @include row($direction: LTR);
       float: right;
+      @include shift(0);
+      margin-right:120px;
     @include media($tablet) { // As defined in _grid-settings.scss
       float: left;
+      @include shift(1);
     }
-
-
   }
 }
 
 .work.first {
-  img.teaser {
-    /* margin-top:-200px; */
-    @include media($tablet) { // As defined in _grid-settings.scss
-      margin-top:0px;
+
+  .teaser{
+    img {
+      /* margin-top:-200px; */
+      @include media($tablet) { // As defined in _grid-settings.scss
+        margin-top:0px;
+      }
     }
   }
+
   .caption  {
     padding-top:0px;
     @include media($tablet) { // As defined in _grid-settings.scss
         margin-top:0px;
     }
-
   }
-
 }
 
 
@@ -309,12 +328,17 @@ footer {
       color:$tertiary-color;
     }
 
-
-    @include media($mobile) { // As defined in _grid-settings.scss
+    @include media($tablet) { // As defined in _grid-settings.scss
       li {
         width:100%;
         border:none;
         padding:0;
+      }
+    }
+    @include media($mobile) { // As defined in _grid-settings.scss
+      li {
+        width:100%;
+        border:none;
       }
     }
 
