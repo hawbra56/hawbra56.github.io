@@ -373,6 +373,9 @@ footer.inner {
   section {
     padding: 50px 120px; }
 
+  .header a.site-title {
+    left: -35px; }
+
   .work .teaser {
     width: 90%;
     float: right;
