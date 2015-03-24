@@ -6,40 +6,37 @@ body {
 
 .wrapper {
   position:relative;
-  width:87%;
-  margin-left:13%;
+  width:92%;
+  margin-left:8%;
   background: $base-color;
-  @include media($tablet) { // As defined in _grid-settings.scss
-    width:90%;
-    margin-left:10%;
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    width:92%;
-    margin-left:8%;
-  }
 }
 
 .content {
-  @include outer-container;
   position: relative;
   zoom: 1;
-  overflow:hidden;
 
 }
 
 .inner {
-  @include span-columns(10);
-  @include shift(1);
   img {width:100%;}
-  @include media($tablet) { // As defined in _grid-settings.scss
-    @include span-columns(7);
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(5);
-  }
+  padding: 50px;
+  overflow:hidden;
 
 }
 
+section:before,
+section:after { content:""; display:table; }
+section:after { clear: both; }
+section {
+  padding: 50px;
+  border-bottom:1px solid #eee;
+  background: $base-color;
+  overflow:hidden;
+  img {width:100%;}
+}
+section.project {
+  padding-top:0;
+}
 
 /* Site header */
 
@@ -52,12 +49,6 @@ body {
     top:-22px;
     right:40px;
     display:block;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      right:10px;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-
-    }
 
   }
   a.site-title img{
@@ -69,13 +60,7 @@ body {
     -o-filter: invert(100%);
     -ms-filter: invert(100%);
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
-    @include media($tablet) { // As defined in _grid-settings.scss
-      height:120px;
-      width:120px;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
 
-    }
   }
   a.site-title:hover{
     opacity: 0.5;
@@ -88,21 +73,14 @@ body {
 
 
 .site-nav {
-  @include span-columns(10);
-  @include shift(1);
+
   float:left;
   line-height: 85px;
   font-family: $primary-font;
   font-weight:700;
   text-transform: uppercase;
   margin-bottom:50px;
-
-  @include media($tablet) { // As defined in _grid-settings.scss
-
-  }
-  @include media($mobile) { // As defined in _grid-settings.scss
-    
-  }
+  width:100%;
 
   li { list-style:none;}
   li a {
@@ -121,51 +99,24 @@ body {
 /* ----------------------------------------------------------*/
 
 
-section:before,
-section:after { content:""; display:table; }
-section:after { clear: both; }
-section {
-  padding: 50px 0 50px 0;
-  border-bottom:1px solid #eee;
-  background: $base-color;
-
-}
 
 .section-title{
   margin-bottom: 32px;
 }
 
 .intro {
-  padding:150px 0 50px 0;
+  padding-top:150px;
   background: none;
   h1 {
-    @include span-columns(8);
-    @include shift(1);
     color: #000;
     text-align:left;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      @include span-columns(6);
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      @include span-columns(4);
-    }
   }
-
 }
 
-.project-intro {
-  padding:0 0 25px 0;
-  background: none;
-  border:none;
-
-}
-
-  .work {
+.work {
     padding-bottom: 0;
+
     .teaser {
-      @include span-columns(7 of 12);
-      @include shift(1);
-      float:right;
       img {
         width:100%;
         display:block;
@@ -173,88 +124,21 @@ section {
         padding-top:32px;
         margin:0;
       }
-      @include media($tablet) { // As defined in _grid-settings.scss
-        @include span-columns(6);
-        @include shift(0);
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        @include span-columns(6);
-        @include shift(0);
-      }
-
     }
 
     .caption  {
-      @include span-columns(3 of 12);
-      @include shift(1);
-      float:left;
-      text-align: left;
-      padding-top:200px;
-      @include media($tablet) { // As defined in _grid-settings.scss
-        padding-top:0;
-        @include span-columns(6);
-      }
-      @include media($mobile) { // As defined in _grid-settings.scss
-        @include span-columns(4);
-      }
+      padding-top:100px;
     }
 
-}
-.work .teaser:last-child {
-  margin-right:-20px;
-
-}
-
-.work.alt {
-  .teaser{
-    float:left;
-    margin-left:-20px;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      @include span-columns(6);
-      @include shift(1);
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      @include span-columns(6);
-      @include shift(0);
-    }
-
-  }
-
-  .caption {
-      @include row($direction: LTR);
-      float: right;
-      @include shift(0);
-      margin-right:120px;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      float: left;
-      @include shift(1);
-    }
-  }
-}
-
-.work.first {
-
-  .teaser{
-    img {
-      /* margin-top:-200px; */
-      @include media($tablet) { // As defined in _grid-settings.scss
-        margin-top:0px;
-      }
-    }
-  }
-
-  .caption  {
-    padding-top:0px;
-    @include media($tablet) { // As defined in _grid-settings.scss
-        margin-top:0px;
-    }
-  }
 }
 
 
 .recent-work {
-  padding:100px 0 0 0;
+  padding:0;
   border:none;
+  .inner {
+    padding-bottom:0;
+  }
 }
 
 
@@ -267,14 +151,9 @@ section {
   li a {
     float: left;
     display:block;
-    width:25%;
+    width:50%;
     line-height:0;
-    @include media($tablet) { // As defined in _grid-settings.scss
-      width:50%;
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      width:50%;
-    }
+
   }
    a img{
       width:100%;
@@ -294,10 +173,10 @@ section {
 
 /* Site footer */
 
-footer {
+footer.inner {
   background: $base-color;
 /*   border-top: 1px solid #e8e8e8; */
-  padding:100px 0;
+  padding-top:100px;
 
   .connect-links {
     list-style: none;
@@ -306,9 +185,10 @@ footer {
 
     li {
       display:inline-block;
-      border-right: solid 1px $tertiary-color;
-      padding: 0 10px;
+      padding: 0;
       line-height:12px;
+      width:100%;
+      border:none;
     }
     li:last-child {
       border-right:none;
@@ -326,20 +206,6 @@ footer {
     }
     li a:hover{
       color:$tertiary-color;
-    }
-
-    @include media($tablet) { // As defined in _grid-settings.scss
-      li {
-        width:100%;
-        border:none;
-        padding:0;
-      }
-    }
-    @include media($mobile) { // As defined in _grid-settings.scss
-      li {
-        width:100%;
-        border:none;
-      }
     }
 
   }
@@ -440,5 +306,102 @@ footer {
 
 
 
-/* media queries */
+/* Tablet specific */
 /* ----------------------------------------------------------*/
+@media (min-width: 600px) {
+
+
+  .wrapper {
+    width:90%;
+    margin-left:10%;
+  }
+
+
+
+
+}
+
+/* Desktop specific */
+/* ----------------------------------------------------------*/
+@media (min-width: 1000px) {
+
+  .wrapper {
+    width:87%;
+    margin-left:13%;
+  }
+
+  .inner {
+    padding: 50px 120px;
+  }
+
+  section:before,
+  section:after { content:""; display:table; }
+  section:after { clear: both; }
+  section {
+    padding: 50px 120px;
+  }
+
+
+  .header {
+    a.site-title {
+      left:-35px;
+    }
+  }
+
+  .work .teaser:last-child {}
+  .work {
+    .teaser{
+      width:90%;
+      float:right;
+      margin-right:-200px;
+      img {
+
+      }
+    }
+    .caption {
+      width:25%;
+      float:left;
+    }
+  }
+  .work.alt {
+    .teaser{
+      float:left;
+      margin-left:-200px;
+    }
+    .caption {
+      float:right;
+    }
+  }
+
+  .work.first {
+    .teaser{
+      img {
+        /* margin-top:-200px; */
+      }
+    }
+    .caption  {
+
+    }
+  }
+
+
+  #dribbble-feed {
+      li a {
+        width:25%;
+      }
+  }
+
+
+  footer.inner {
+      .connect-links {
+        li {
+          display:inline-block;
+          width:auto;
+          padding: 0 10px;
+          border-right: solid 1px $tertiary-color;
+        }
+      }
+  }
+
+
+}

@@ -39,11 +39,17 @@ a         {
   text-decoration: none;
   cursor:pointer;
 }
+
 a:hover,
 section a:hover,
 .caption a:hover,
-footer a:hover   { color: $tertiary-color; text-decoration: none; }
-a:visited { color: $primary-action-color; }
+footer a:hover {
+  color: $tertiary-color;
+  text-decoration: none;
+}
 
+a:visited { 
+  color: $primary-action-color;
+}
 
 .clear { clear: both;}
