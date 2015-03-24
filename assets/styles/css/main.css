@@ -144,7 +144,9 @@ section.project {
 
 /* Site header */
 .header {
-  z-index: 9999; }
+  z-index: 9999;
+  float: right;
+  position: relative; }
   .header a.site-title {
     position: absolute;
     z-index: 2;
@@ -175,6 +177,7 @@ section.project {
   .site-nav li {
     list-style: none; }
   .site-nav li a {
+    display: block;
     font-size: 12px;
     margin-right: 40px;
     color: #000;
@@ -373,8 +376,14 @@ footer.inner {
   section {
     padding: 50px 120px; }
 
-  .header a.site-title {
-    left: -35px; }
+  .header {
+    float: left; }
+    .header a.site-title {
+      left: -35px; }
+
+  .site-nav li {
+    list-style: none;
+    float: right; }
 
   .work .teaser {
     width: 90%;
@@ -383,7 +392,7 @@ footer.inner {
   .work .caption {
     width: 25%;
     float: left;
-    padding-top: 100px; }
+    padding-top: 125px; }
 
   .work.alt .teaser {
     float: left;
@@ -424,7 +433,7 @@ footer.inner {
         color: #a1a5b3; }
 
 .project .subtitle {
-  padding-bottom: 50px; }
+  padding-bottom: 20px; }
 
 @media (min-width: 1000px) {
   .project-nav li {

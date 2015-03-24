@@ -42,6 +42,8 @@ section.project {
 
 .header {
   z-index: 9999;
+  float:right;
+  position:relative;
 
   a.site-title {
     position: absolute;
@@ -84,6 +86,7 @@ section.project {
 
   li { list-style:none;}
   li a {
+    display:block;
     font-size: 12px;
     margin-right: 40px;
     color: #000;
@@ -311,16 +314,10 @@ footer.inner {
 /* Tablet specific */
 /* ----------------------------------------------------------*/
 @media (min-width: 600px) {
-
-
   .wrapper {
     width:90%;
     margin-left:10%;
   }
-
-
-
-
 }
 
 /* Desktop specific */
@@ -345,8 +342,15 @@ footer.inner {
 
 
   .header {
+    float:left;
     a.site-title {
       left:-35px;
+    }
+  }
+  .site-nav {
+    li {
+      list-style:none;
+      float:right;
     }
   }
 
@@ -363,7 +367,7 @@ footer.inner {
     .caption {
       width:25%;
       float:left;
-      padding-top:100px;
+      padding-top:125px;
     }
   }
   .work.alt {
