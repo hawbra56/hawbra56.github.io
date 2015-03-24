@@ -1,20 +1,44 @@
 .project-nav {
   list-style:none;
   margin-top:24px;
+  float:left;
+  margin:0;
+  padding:0;
+  margin-top:24px;
+  width:100%;
+
+
 
     li{
+      display:block;
+      float:left;
       list-style:none;
-      margin-bottom:24px;
+      width:100%;
 
       a{
+        display:block;
         font-size:18px;
         line-height:24px;
+        padding-bottom:24px;
 
         span {color:$tertiary-color;}
       }
     }
+
   }
 
 .project .subtitle {
   padding-bottom:50px;
+}
+
+
+@media (min-width: 1000px) {
+
+  .project-nav {
+      li{
+        width:50%;
+      }
+    }
+
+
 }

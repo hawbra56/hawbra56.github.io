@@ -44,11 +44,12 @@ a:hover,
 section a:hover,
 .caption a:hover,
 footer a:hover {
-  color: $tertiary-color;
+  // color: $tertiary-color;
+  color:#0AE1A2;
   text-decoration: none;
 }
 
-a:visited { 
+a:visited {
   color: $primary-action-color;
 }
 
