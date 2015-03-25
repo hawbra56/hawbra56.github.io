@@ -76,7 +76,7 @@ h3 {
 
 h4 {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.7em;
   color: #a1a5b3;
   letter-spacing: .2em;
   text-transform: uppercase; }
@@ -118,7 +118,7 @@ p.copyright {
   zoom: 1; }
 
 .inner {
-  padding: 50px;
+  padding: 40px;
   overflow: hidden; }
   .inner img {
     width: 100%; }
@@ -132,7 +132,7 @@ section:after {
   clear: both; }
 
 section {
-  padding: 50px;
+  padding: 40px;
   border-bottom: 1px solid #eee;
   background: white;
   overflow: hidden; }
@@ -151,9 +151,10 @@ section.project {
     position: absolute;
     z-index: 2;
     top: -22px;
-    right: 40px;
+    right: 25px;
     display: block; }
   .header a.site-title img {
+    width: 120px;
     /* position: fixed; */
     filter: invert(100%);
     -webkit-filter: invert(100%);
@@ -172,19 +173,20 @@ section.project {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   width: 100%; }
   .site-nav li {
     list-style: none; }
-  .site-nav li a {
-    display: block;
-    font-size: 12px;
-    margin-right: 40px;
-    color: #000;
-    letter-spacing: 2px; }
-  .site-nav li a:hover {
-    color: #0AE1A2;
-    text-decoration: none; }
+    .site-nav li a {
+      display: block;
+      margin-top: 40px;
+      font-size: 12px;
+      line-height: 1.7em;
+      letter-spacing: .2em;
+      color: #000; }
+    .site-nav li a:hover {
+      color: #0AE1A2;
+      text-decoration: none; }
 
 /* Page Content styles */
 /* ----------------------------------------------------------*/
@@ -204,7 +206,6 @@ section.project {
     width: 100%;
     display: block;
     padding: 0;
-    padding-top: 32px;
     margin: 0; }
   .work .caption {
     padding-top: 50px; }
@@ -252,7 +253,8 @@ footer.inner {
       padding: 0;
       line-height: 12px;
       width: 100%;
-      border: none; }
+      border: none;
+      padding: 5px 0; }
     footer.inner .connect-links li:last-child {
       border-right: none; }
     footer.inner .connect-links li:first-child {
@@ -363,7 +365,7 @@ footer.inner {
     margin-left: 13%; }
 
   .inner {
-    padding: 50px 120px; }
+    padding: 50px 80px; }
 
   section:before,
   section:after {
@@ -374,21 +376,25 @@ footer.inner {
     clear: both; }
 
   section {
-    padding: 50px 120px; }
+    padding: 50px 80px; }
 
-  .header {
-    float: left; }
-    .header a.site-title {
-      left: -35px; }
+  .header a.site-title {
+    right: 40px; }
+  .header a.site-title img {
+    width: 141px; }
 
   .site-nav li {
     list-style: none;
-    float: right; }
+    float: left; }
+
+  .intro {
+    padding-right: 200px; }
 
   .work .teaser {
     width: 90%;
     float: right;
-    margin-right: -200px; }
+    margin-right: -200px;
+    padding-top: 30px; }
   .work .caption {
     width: 25%;
     float: left;
@@ -428,7 +434,7 @@ footer.inner {
       display: block;
       font-size: 18px;
       line-height: 24px;
-      padding-bottom: 24px; }
+      padding: 12px 0; }
       .project-nav li a span {
         color: #a1a5b3; }
 

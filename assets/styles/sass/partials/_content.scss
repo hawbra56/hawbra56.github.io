@@ -18,9 +18,11 @@ body {
 }
 
 .inner {
-  img {width:100%;}
-  padding: 50px;
+  padding: 40px;
   overflow:hidden;
+  img {
+    width:100%;
+  }
 
 }
 
@@ -28,7 +30,7 @@ section:before,
 section:after { content:""; display:table; }
 section:after { clear: both; }
 section {
-  padding: 50px;
+  padding: 40px;
   border-bottom:1px solid #eee;
   background: $base-color;
   overflow:hidden;
@@ -49,11 +51,11 @@ section.project {
     position: absolute;
     z-index: 2;
     top:-22px;
-    right:40px;
+    right:25px;
     display:block;
-
   }
   a.site-title img{
+    width:120px;
     /* position: fixed; */
     filter: invert(100%);
     // Browser Specific
@@ -75,27 +77,29 @@ section.project {
 
 
 .site-nav {
-
   float:left;
   line-height: 85px;
   font-family: $primary-font;
   font-weight:700;
   text-transform: uppercase;
-  margin-bottom:50px;
+  margin-bottom:60px;
   width:100%;
 
-  li { list-style:none;}
-  li a {
-    display:block;
-    font-size: 12px;
-    margin-right: 40px;
-    color: #000;
-    letter-spacing: 2px;
-  }
-  li a:hover{
-    // color:$tertiary-color;
-    color:#0AE1A2;
-    text-decoration:none;
+  li { list-style:none;
+
+    a {
+      display:block;
+      margin-top: 40px;
+      font-size: 12px;
+      line-height: 1.7em;
+      letter-spacing:.2em;
+      color: #000;
+    }
+    a:hover{
+      // color:$tertiary-color;
+      color:#0AE1A2;
+      text-decoration:none;
+    }
   }
 }
 
@@ -125,7 +129,6 @@ section.project {
         width:100%;
         display:block;
         padding:0;
-        padding-top:32px;
         margin:0;
       }
     }
@@ -193,6 +196,7 @@ footer.inner {
       line-height:12px;
       width:100%;
       border:none;
+      padding:5px 0;
     }
     li:last-child {
       border-right:none;
@@ -207,6 +211,7 @@ footer.inner {
       color:$primary-action-color;
       letter-spacing:.2em;
       text-transform:uppercase;
+
     }
     li a:hover{
       // color:$tertiary-color;
@@ -330,36 +335,42 @@ footer.inner {
   }
 
   .inner {
-    padding: 50px 120px;
+    padding: 50px 80px;
   }
 
   section:before,
   section:after { content:""; display:table; }
   section:after { clear: both; }
   section {
-    padding: 50px 120px;
+    padding: 50px 80px;
   }
 
 
   .header {
-    float:left;
     a.site-title {
-      left:-35px;
+      right:40px;
     }
+    a.site-title img{
+      width:141px;
   }
+}
   .site-nav {
     li {
       list-style:none;
-      float:right;
+      float:left;
     }
   }
 
+  .intro {
+    padding-right:200px;
+  }
   .work .teaser:last-child {}
   .work {
     .teaser{
       width:90%;
       float:right;
       margin-right:-200px;
+      padding-top:30px;
       img {
 
       }
