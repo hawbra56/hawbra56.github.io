@@ -391,18 +391,18 @@ footer.inner {
     padding-right: 200px; }
 
   .work .teaser {
-    width: 90%;
+    width: 80%;
     float: right;
-    margin-right: -200px;
-    padding-top: 30px; }
+    margin-right: -100px;
+    padding-top: 60px; }
   .work .caption {
     width: 25%;
     float: left;
-    padding-top: 125px; }
+    padding-top: 175px; }
 
   .work.alt .teaser {
     float: left;
-    margin-left: -200px; }
+    margin-left: -100px; }
   .work.alt .caption {
     float: right; }
 
@@ -440,7 +440,11 @@ footer.inner {
 
 .project .subtitle {
   padding-bottom: 20px; }
+.project img {
+  padding-bottom: 32px; }
 
 @media (min-width: 1000px) {
   .project-nav li {
-    width: 50%; } }
+    width: 33%; }
+    .project-nav li a {
+      padding-right: 100px; } }

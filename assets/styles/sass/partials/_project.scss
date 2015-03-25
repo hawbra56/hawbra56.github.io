@@ -25,18 +25,28 @@
 
   }
 
-.project .subtitle {
-  padding-bottom:20px;
+.project {
+  .subtitle {
+    padding-bottom:20px;
+  }
+  img {
+    padding-bottom:32px;
+  }
 }
+
 
 
 @media (min-width: 1000px) {
 
   .project-nav {
       li{
-        width:50%;
+        width:33%;
+        a{
+          padding-right:100px;
+        }
       }
-    }
+      }
+
 
 
 }
