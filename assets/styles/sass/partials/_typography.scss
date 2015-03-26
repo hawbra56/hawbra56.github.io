@@ -51,7 +51,7 @@ p.bio-short {
 }
 
   p.subtitle {
-    font-family:$secondary-font;
+    font-family:$primary-font;
     font-size:14px;
     line-height:20px;
     color: $tertiary-color;
@@ -59,10 +59,16 @@ p.bio-short {
     letter-spacing:-.05em;
     margin-bottom:8px;
   }
+  p.caption {
+    padding-bottom:50px;
+    font-style:italic;
+    font-size:14px;
+    color: $tertiary-color;
+  }
 
   p.copyright {
-    font-family:$secondary-font;
+    font-family:$primary-font;
     font-size:10px;
-    line-height:14px;
+    line-height: 1.7em;
     color: $tertiary-color;
   }

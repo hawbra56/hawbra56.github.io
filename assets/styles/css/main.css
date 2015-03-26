@@ -99,10 +99,16 @@ p.subtitle {
   letter-spacing: -.05em;
   margin-bottom: 8px; }
 
+p.caption {
+  padding-bottom: 50px;
+  font-style: italic;
+  font-size: 14px;
+  color: #a1a5b3; }
+
 p.copyright {
   font-family: "Libre Baskerville", serif;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 1.7em;
   color: #a1a5b3; }
 
 /* Layout Styles */
@@ -154,7 +160,7 @@ section.project {
     right: 25px;
     display: block; }
   .header a.site-title img {
-    width: 120px;
+    width: 100px;
     /* position: fixed; */
     filter: invert(100%);
     -webkit-filter: invert(100%);
@@ -406,9 +412,6 @@ footer.inner {
   .work.alt .caption {
     float: right; }
 
-  .work.first .teaser img {
-    /* margin-top:-200px; */ }
-
   #dribbble-feed li a {
     width: 25%; }
 
@@ -441,7 +444,9 @@ footer.inner {
 .project .subtitle {
   padding-bottom: 20px; }
 .project img {
-  padding-bottom: 32px; }
+  padding-bottom: 50px; }
+.project img.caption {
+  padding-bottom: 10px; }
 
 @media (min-width: 1000px) {
   .project-nav li {

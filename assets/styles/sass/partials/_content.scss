@@ -55,7 +55,7 @@ section.project {
     display:block;
   }
   a.site-title img{
-    width:120px;
+    width:100px;
     /* position: fixed; */
     filter: invert(100%);
     // Browser Specific
@@ -347,6 +347,7 @@ footer.inner {
 
 
   .header {
+    // float:left;
     a.site-title {
       right:40px;
     }
@@ -388,17 +389,6 @@ footer.inner {
     }
     .caption {
       float:right;
-    }
-  }
-
-  .work.first {
-    .teaser{
-      img {
-        /* margin-top:-200px; */
-      }
-    }
-    .caption  {
-
     }
   }
 
