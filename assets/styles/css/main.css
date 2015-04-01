@@ -444,7 +444,7 @@ footer.inner {
 .project .subtitle {
   padding-bottom: 20px; }
 .project img {
-  padding-bottom: 50px; }
+  padding-bottom: 30px; }
 .project img.caption {
   padding-bottom: 10px; }
 
@@ -452,4 +452,7 @@ footer.inner {
   .project-nav li {
     width: 33%; }
     .project-nav li a {
-      padding-right: 100px; } }
+      padding-right: 100px; }
+
+  .project img {
+    padding-bottom: 50px; } }
