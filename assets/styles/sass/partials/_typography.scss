@@ -29,6 +29,9 @@
     text-transform: none;
 
   }
+  .project {
+    h3 { margin-top: 30px;}
+  }
 
   h4 {
     font-size: 12px;
@@ -61,7 +64,7 @@ p.bio-short {
     margin-bottom:8px;
   }
   p.caption {
-    padding-bottom:50px;
+    padding-bottom:30px;
     font-style:italic;
     font-size:14px;
     color: $tertiary-color;
