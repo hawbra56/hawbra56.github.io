@@ -85,7 +85,7 @@ Names of people being registered: $NamesOfPeople
 Thank you
 
 
-DISCLAIMER - Please know that registration is done via a �first-come, first served� basis and we have a limited number of conference seats available. If the conference you�ve chosen sells out, or if we are unable to accommodate your request in any way, we will contact you. We are not able to accept any registrations without payment in full, and your payment is non-refundable unless the conference has sold out.
+DISCLAIMER - Please know that registration is done via a first-come, first served basis and we have a limited number of conference seats available. If the conference you've chosen sells out, or if we are unable to accommodate your request in any way, we will contact you. We are not able to accept any registrations without payment in full, and your payment is non-refundable unless the conference has sold out.
 
 
 ";
