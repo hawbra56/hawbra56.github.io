@@ -101,6 +101,8 @@ body {
 
 .sidebar			{	width:191px;  padding:30px 20px 50px 20px; }
 .graybg				{ 	width:100%; background-color:#e6cae1;}
+
+
 .content-innerwrap	{	width:960px; height:auto; margin:auto; background-color:#f9f8f9; border-right: 1px solid #c69fc2; border-left: 1px solid #c69fc2;}
 	.content-sb		{ 	width:960px; height:auto; margin:auto; border-right: 1px solid #c69fc2; border-left: 1px solid #c69fc2; background:#FFF url(../images/bg-sb.jpg) right top repeat-y;}
 .btm-content		{ 	background:url(../images/bg-bttm-cnt.jpg) no-repeat center; width:920px; height:235px; margin:20px 0 60px 0; padding:0 0 0 40px;}
@@ -383,7 +385,6 @@ h1	{
 	font-size: 72px;
 	line-height:normal; 
 	font-weight: normal; 
-	font-family: 'Raleway', sans-serif;
 	font-weight: 200; 
 	color:#780079; 
 	margin-bottom:20px;
@@ -404,11 +405,11 @@ h1.home	{
 }
 
 h2 {
-	font-size:16px;
+   font-size:32px;
+	line-height:36px; 
 	color:#780079; 
-	margin-bottom:2px; 
-	margin-top:30px; 
-	padding:0;
+	margin:40px 0 20px 0;
+	font-weight: 200; 
 }
 
 h3	{
@@ -441,17 +442,17 @@ h4{}
 
 p { 
 	font-size:15px;
-	line-height:1.7em; 
+	line-height:1.5em; 
 	margin:0 0 18px 0; 
 	color:#666; 
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	letter-spacing: .06em;	
+	letter-spacing: .02em;	
 }
 
 p.intro {
-	font-size: 24px;
-	line-height:30px; 
+	font-size: 20px;
+	line-height:26px; 
 	color:#780079; 
 	margin:0 0 20px 0;
 	font-family: 'Raleway', sans-serif;
@@ -553,8 +554,11 @@ dt {
 dd { margin-bottom:10px;}
 
 /*
-# Fontface ################### 
+# Conferences ################### 
 */
+.bubblebg {background: url(../images/bg-bubbles.jpg) no-repeat top;}
+.peacockbg {background: url(../images/bg-peacock.jpg) no-repeat top;}
+
 
 /*
 # Other ################### 

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backup/
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /images/
+Disallow: /_resources/
