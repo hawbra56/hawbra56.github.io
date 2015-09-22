@@ -273,7 +273,7 @@ img.right{margin:0 0 10px 10px;}
 
 
 
-a, a:link, a:visited		{ 	color:#780079; text-decoration:underline; font-size:13px; }
+a, a:link, a:visited		{ 	color:#780079; text-decoration:underline; }
 a:hover			{ 	color:#666;}
 
 a.gray, a.gray:link, a.gray:visited		{ 	color:#888; text-decoration:underline; font-size:13px; }
