@@ -27,7 +27,7 @@
           		<li><a class="home" href="index.html">Home</a></li>
                 <li ><a class="about" href="about.html">About</a></li>
                 <li><a class="conferences" href="conferences.html">Conferences</a></li>
-                <li ><a class="register" href="register.html">Register</a></li>
+                <li ><a class="register" href="registration/from-selfie-to-selfless/">Register</a></li>
                 <li><a class="contact" href="contact.html">Contact</a></li>
             </ul>
             <div class="header-block">
@@ -64,7 +64,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="conferences.html">Conferences</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="registration/from-selfie-to-selfless/">Register</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="clear"></div>
