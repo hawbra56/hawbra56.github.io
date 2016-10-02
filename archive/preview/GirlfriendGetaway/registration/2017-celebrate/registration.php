@@ -98,8 +98,8 @@ if ($DateVenue == 'November 12, 2016 / Eden Resort, Lancaster, PA'){
 		header("Location: 2016-11-12/");
 		exit;
 	}
-if ($DateVenue == 'TBD 2017 / Crossroad Community Church, Georgetown, DE'){
-		header("Location: 2017-04-16/");
+if ($DateVenue == 'March 25, 2017 / Crossroad Community Church, Georgetown, DE'){
+		header("Location: 2017-03-25/");
 		exit;
 	}
 
