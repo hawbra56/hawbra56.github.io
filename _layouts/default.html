@@ -3,17 +3,22 @@
 
   {% include head.html %}
 
-    <body>
-      <div class="background-image"></div>
-      <div class="wrapper">
-        <div class="content">
-
+    <body class="{{ page.class }}">
+		<div class="content_wrap">
           {% include header.html %}
           {{ content }}
-          {% include footer.html %}
 
-        </div>
-      </div>
+
+        </div><!-- END CONTENT WRAP -->
+
+        {% include footer.html %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/respond.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/retina-1.1.0.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+
+
       <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

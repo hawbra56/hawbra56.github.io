@@ -1,0 +1,56 @@
+/* Base */
+/* ----------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color:#0cfab4;
+
+}
+.background-image {
+  background-image: url("../../images/bg-green-mountains.jpg");
+  background-size:  975px 1505px;
+  -webkit-background-size:  975px 1505px;
+  -moz-background-size:  975px 1505px;
+  -o-background-size:  975px 1505px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+
+a         {
+  color: $primary-action-color;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+a:hover,
+section a:hover,
+.caption a:hover,
+footer a:hover {
+  // color: $tertiary-color;
+  color:#0AE1A2;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $primary-action-color;
+}
+
+.clear { clear: both;}

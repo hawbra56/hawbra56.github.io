@@ -1,22 +1,16 @@
+
 // BASE
 // theme variables are found in the config
-@import "base/config";
+@import "base/reset";
 @import "base/base";
 
-// // LIBRARIES
+
 // // Any extra mixins and libraries uesd
-// @import "bourbon/bourbon"; //sweet mixin library
-// @import "base/grid-settings"; //resets for neats variables
-// @import "base/break-points"; //resets for neats variables
-// $visual-grid: false;
-// $visual-grid-index: front;
-// $visual-grid-color: #EEE !default;
-// @import "bourbon/neat/neat"; //sweet grid framework
-// @import "base/break-points"; //resets for neats variables
+
 
 
 // PARTIALS
 // Rest of the site styling
-@import "partials/typography";
-@import "partials/content";
-@import "partials/project";
+// @import "partials/typography";
+// @import "partials/content";
+// @import "partials/project";

@@ -1,56 +1,646 @@
-/* Base */
-/* ----------------------------------------------------------*/
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  background-color:#0cfab4;
-
-}
-.background-image {
-  background-image: url("../../images/bg-green-mountains.jpg");
-  background-size:  975px 1505px;
-  -webkit-background-size:  975px 1505px;
-  -moz-background-size:  975px 1505px;
-  -o-background-size:  975px 1505px;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-position: left top;
+  font-family: arial, sans-serif;
   background-repeat: no-repeat;
+  background-size: 40% 100%;
+  background-position: right 0;
+  background-color: #fff;
+  background-image: linear-gradient(#f7f7f7, #f7f7f7);
+  color: #000;
 }
 
 
-a         {
-  color: $primary-action-color;
-  text-decoration: none;
-  cursor:pointer;
+body.dark {
+  background-color: #171717;
+  background-image: linear-gradient(#111111, #111111);
 }
 
-a:hover,
-section a:hover,
-.caption a:hover,
-footer a:hover {
-  // color: $tertiary-color;
-  color:#0AE1A2;
-  text-decoration: none;
+body.kidsdiscover {
+  background-color: #fff;
+  background-image: linear-gradient(#fffbe3, #fffbe3);
+}
+body.hatchback {
+  background-color: #fff;
+  background-image: linear-gradient(#fffbe3, #fffbe3);
+}
+body.milkmoney {
+  background-color: #fff;
+  background-image: linear-gradient(#fef5fb, #fef5fb);
+}
+body.andculture {
+  background-color: #fff;
+  background-image: linear-gradient(#fdf1e5, #fdf1e5);
 }
 
-a:visited {
-  color: $primary-action-color;
+.clear {
+  clear: both;
 }
 
-.clear { clear: both;}
+/* Structure */
+.content_wrap {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0 0 50px 0;
+  position: relative;
+
+  img {width: 100%; display: block; max-width: 1200px; margin: 0 auto;}
+}
+
+footer {
+  width: 100%;
+  background: #111111;
+  margin-top: 50px;
+  padding-top: 140px;
+}
+.home footer {margin-top: -125px;}
+.dark footer {
+  background: none;
+}
+
+.connect{
+  margin-bottom: 140px;
+
+  .bar {
+    display: block;
+    float: left;
+    width: 8%;
+    height:4px;
+    background: #fff;
+    margin-top: 18px;
+    margin-right: 20px;
+  }
+  p{
+  float: left;
+  display: inline-block;
+  padding-right: 20px;}
+}
+.about .connect { display: none;}
+
+/* Typography */
+
+p,h1,h2,h3 {
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+
+}
+
+h1,h2,h3 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 115px;
+  line-height:115px;
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 112px;
+  line-height: 112px;
+}
+h2.small {
+  font-size: 80px;
+  line-height:80px;
+
+}
+
+h3 {
+  font-size: 24px;
+  line-height:32px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #666;
+}
+p.role {
+  color:#000;
+  font-size: 14px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  strong {
+    font-weight: bold;
+  }
+}
+
+p.intro {
+  font-size: 24px;
+  line-height: 48px;
+  margin-bottom: 64px;
+}
+p.copyright {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  color: #999;
+a {color: #999;}
+}
+
+p.rotated-label,
+p.label {
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 0.6em;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+p.rotated-label {
+  position: absolute;
+  left: -1%;
+  top: 50px;
+  line-height: 20px;
+  transform: rotate(90deg);
+  width: 100px;
+}
+
+p.label {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+a:hover {opacity: .6;}
+
+a.logo {
+  display: block;
+  position: absolute;
+  left: 15%;
+  top: 0;
+}
+a.logo img {
+  width: 200px;
+  height: 173px;}
+
+
+
+.dark {
+  a,h2 { color: #fff;}
+  p, p.intro {
+    color: #fff;
+  }
+  p.rotated-label {
+    color: #999;
+  }
+  p.copyright {
+    color: #999;
+    a {color: #999;}
+  }
+
+}
+
+
+
+/* Lists
+---------------------------------------- */
+
+ul, ol {
+	list-style-position: inside;
+	padding: 0;
+}
+
+li ul, li ol {
+	margin: 0 1.625em;
+}
+
+dl dd {
+	margin-left: 1.625em;
+}
+
+
+
+/* Navigation
+---------------------------------------- */
+
+nav {
+	position: relative;
+	display: block;
+	float: right;
+	margin-top: 60px;
+	margin-bottom: 180px;
+	margin-right: 10%;
+  z-index: 99999;
+
+}
+
+/*.about nav {margin-bottom: 90px;}*/
+nav ul{
+	list-style-position: inside;
+	padding: 0;
+}
+
+nav ul li{
+	display: block;
+	float: left;
+}
+
+nav ul li a{
+	padding: 20px;
+	font-size: 14px;
+	line-height: 16px;
+	text-decoration: none;;
+	font-weight: bold;
+	color: #000;
+}
+// nav ul li a:hover{
+// 	color: #999;
+// }
+// // nav ul li a.selected{
+// // 	color: #333;
+// // }
+
+.dark {
+  nav ul li a { color: #fff;}
+  // nav ul li a:hover{ color: #666;}
+  // nav ul li a.selected {color: #fff;}
+}
+
+
+
+
+
+
+/* Offset Section with Label */
+
+.offset-label {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 60px 0 32px 0;
+  overflow: hidden;
+
+    .content {
+      z-index: 99999;
+      position: relative;
+      display: block;
+      left: 12%;
+      top: 0;
+      width: 70%;
+    }
+
+    h2 {
+    z-index: 99999;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  /* Project related stuff */
+    .description {
+      z-index: 99999;
+      position: absolute;
+      display: block;
+      left: 12%;
+      top: 100px;
+      width: 40%;
+
+      h2 {
+        // font-size: 115px;
+        // line-height: 100px;
+      }
+      p.role {
+       background: url(http://bradhdesign.com/archive/preview/portfolio-17/border-black-small.jpg) left 8px top 8px no-repeat;
+       color: black;
+       padding-left: 80px;
+       font-size: 14px;
+       line-height: 18px;
+
+     }
+
+    }
+}
+
+.offset-label:hover {
+
+  .project-desc {
+    opacity: 1;
+  }
+  .description {
+    mix-blend-mode: multiply;
+  }
+
+    // .project-card {
+    //   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.08), 0 19px 76px rgba(0, 0, 0, 0.1);
+    // }
+
+    .project-image img {
+      opacity: 1;
+    }
+
+}
+
+.kidsdiscover:hover {
+  .description h2 {
+    color: #f5c401;
+  }
+}
+
+.trytn:hover {
+  .description h2 {
+    color: #00ecbf;
+  }
+}
+
+.milkmoney:hover {
+  .description h2 {
+    color: #f92d65;
+  }
+}
+
+.hatchback:hover {
+  .description h2 {
+    color: #fdca36;
+  }
+}
+
+.andculture:hover {
+    .description h2 {
+      color: #fea44b;
+    }
+
+}
+
+
+
+
+
+/* Project Rows */
+a.project-row:hover {opacity: 1}
+.project-card {
+  position: relative;
+  width: 58%;
+  margin-left: 40%;
+  display: block;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.kidsdiscover .project-image {
+  background: -webkit-linear-gradient(left top, #1bbdb8, #54f750);
+}
+
+.project-image {
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: all 300ms;
+}
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-filter: blur(0) hue-rotate(0);
+  filter: blur(0) hue-rotate(0);
+  transition: all 300ms;
+}
+
+
+
+.project-desc {
+  position: absolute;
+  bottom: 0;
+  padding: 100% 50px 50px 50px;
+  text-align: left;
+  opacity: 0;
+  transition: transform 300ms ease-in-out 50ms, opacity 300ms;
+  background: red;
+  width: 100%;
+}
+.project-desc h5 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: regular;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  margin-bottom: 8px;
+}
+.project-desc p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: regular;
+  text-align: right;
+  padding-right: 120px;
+}
+
+.kidsdiscover .project-desc {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #f5c401));
+}
+
+.trytn .project-desc {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #00ecbf));
+}
+.hatchback .project-desc {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #fdca36));
+}
+.milkmoney .project-desc {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #f92d65));
+}
+
+.andculture .project-desc {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #fea44b));
+}
+
+
+/* Tablet Media Queries */
+
+@media screen and (max-width: 1024px) {
+
+  footer {
+    margin-top: 0px;
+  }
+  .home footer {margin-top: 0px;}
+  .connect{
+    .bar {
+      display: none;
+    }
+  }
+  h1 {
+    font-size: 115px;
+    line-height:115px;
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 68px;
+    line-height: 70px;
+    // margin-bottom: 24px;
+  }
+  h2.small {
+    font-size: 68px;
+    line-height: 70px;
+    // margin-bottom: 24px;
+
+  }
+
+  // h3 {
+  //   font-size: 24px;
+  //   line-height:32px;
+  //   margin-bottom: 16px;
+  // }
+
+
+  nav {
+    margin-bottom: 180px;
+    margin-right: 5%;
+    margin-top: 40px;
+    }
+
+    .content_wrap {
+      width: 100%;
+      img {width: 90%;}
+    }
+
+    .project-row {
+      img {width: 100%;}
+    }
+
+    .offset-label {
+        width: 100%;
+
+        .description {
+        left: 15%;}
+    }
+
+    .project-row {
+    width: 100%;
+    margin: 0 0 120px 0;
+
+      .project-card {
+        width: 65%;
+        margin-left: 50%;
+      }
+
+      p.date {
+        left: 0;
+        top: 60px;
+        font-size: 11px;
+        color: #aaa;
+      }
+      .description {
+        top: 80px;
+      }
+      .description h2 {
+        margin-bottom: 20px;
+      }
+      .description p.role {
+        background: url(http://bradhdesign.com/archive/preview/portfolio-17/border-black-small.jpg) left 0px top 0px no-repeat;
+        color: black;
+        padding-left: 0px;
+        padding-top: 16px;
+        font-size: 14px;
+        line-height: 18px;
+
+      }
+    }
+    p.rotated-label {
+      display: none;
+    }
+    p.label {
+      display: block;
+      margin-bottom: 24px;
+      line-height: 11px;
+    }
+
+}
+
+
+/* Mobile Media Queries */
+
+@media screen and (max-width: 750px) {
+  body {
+    background-size: 3  0% 100%;
+  }
+  nav {
+    margin-bottom: 90px;
+    }
+  .content_wrap {
+    width: 100%;
+    img {width: 100%;}
+  }
+  p{
+    font-size: 14px;
+    line-height: 28px;
+  }
+  p.intro {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  h1 {
+    font-size: 64px;
+    line-height:64px;
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+  h2.small {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 24px;
+
+  }
+
+
+
+  a.logo {
+    left: 8%;
+
+  img {
+    width: 100px;
+    height: 87px;}
+  }
+
+
+
+  .offset-label {
+      .description {
+      left: 10%;}
+
+      h2 {
+        margin-bottom: 24px;
+      }
+  }
+.project-row {
+  .project-card {
+    width: 65%;
+    margin-left: 50%;
+  }
+  .description {
+    top: 10px;
+  }
+  .description h2 {
+    // font-size: 32px;
+    // line-height: 36px;
+    // margin-bottom: 16px;
+  }
+
+  .description p.role {
+    background: none;
+    color: black;
+    padding-left: 0px;
+    padding-top: 0px;
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  }
+  .offset-label .content {
+    left: 10%;
+    width: 80%;
+  }
+}
