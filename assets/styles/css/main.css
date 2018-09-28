@@ -153,6 +153,9 @@ p {
   line-height: 40px;
   color: #666; }
 
+p span.strong {
+  font-weight: bold; }
+
 p.role {
   color: #000;
   font-size: 14px;
@@ -212,7 +215,7 @@ a.logo img {
   width: 200px;
   height: 173px; }
 
-.dark a, .dark h2 {
+.dark a, .dark h2, .dark h3, .dark h4 {
   color: #fff; }
 .dark p, .dark p.intro {
   color: #fff; }
@@ -395,6 +398,39 @@ a.project-row:hover {
 .andculture .project-desc {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(200%, #fea44b)); }
 
+.dribbble {
+  margin: 72px 0 112px 0; }
+  .dribbble #shots {
+    margin-top: 16px; }
+    .dribbble #shots .shot {
+      position: relative;
+      display: block;
+      float: left;
+      width: 23%;
+      background: #000;
+      color: white;
+      text-decoration: none;
+      margin-right: 2%; }
+      .dribbble #shots .shot:hover img {
+        opacity: .1; }
+      .dribbble #shots .shot:hover .title {
+        opacity: 1; }
+      .dribbble #shots .shot .shot::last-child {
+        margin-right: 0; }
+      .dribbble #shots .shot .title {
+        position: absolute;
+        width: calc(100% - 2rem);
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px; }
+      .dribbble #shots .shot img {
+        display: block;
+        max-width: 100%;
+        transition: opacity .2s ease-in-out; }
+
 /* Tablet Media Queries */
 @media screen and (max-width: 1024px) {
   footer {
@@ -478,7 +514,7 @@ a.project-row:hover {
   .content_wrap {
     width: 100%; }
     .content_wrap img {
-      width: 100%; }
+      width: 90%; }
 
   p {
     font-size: 14px;
